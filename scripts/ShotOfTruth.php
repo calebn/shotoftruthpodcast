@@ -5,7 +5,7 @@ namespace shotoftruth {
 		protected $site_sxe;
 		function __construct(string $rss_xml) {
 			if(empty($rss_xml)) {
-				throw new InvalidArgumentException('rss_xml cannot be empty');
+				throw new \InvalidArgumentException('rss_xml cannot be empty');
 			}
 			$this->site_sxe = new \SimpleXMLElement($rss_xml,LIBXML_NOCDATA);
 			$this->site_sxe->registerXPathNamespace('itunes','http://www.itunes.com/dtds/podcast-1.0.dtd');
