@@ -1,0 +1,84 @@
+.shot-of-truth {
+  margin-top: 56px;
+}
+.shot-of-truth .navbar {
+  background-color: #F9F1E1 !important;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.shot-of-truth h1 {
+  color: #5B0CE2;
+  font-weight: bold;
+}
+.shot-of-truth .card {
+  background-color: inherit;
+  border: none;
+}
+.shot-of-truth .card .card-title {
+  color: #2C0774;
+  font-weight: bold;
+}
+.shot-of-truth .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shot-of-truth a {
+  color: #5B0CE2;
+}
+.shot-of-truth a:hover {
+  color: #2C0774;
+  text-decoration: underline!important;
+}
+.shot-of-truth .btn-primary {
+  background-color: #5B0CE2;
+  color: #fff;
+  border-color: #2C0774;
+}
+.shot-of-truth .btn-primary:hover {
+  color: #fff;
+  text-decoration: none!important;
+  background-color: #2C0774;
+}
+.shot-of-truth .home .row img {
+  width: 100%;
+}
+.shot-of-truth .home .jumbotron {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-image: url("/images/headphone-1600.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 1601px) {
+  .shot-of-truth .home .jumbotron {
+    background-image: url("/images/headphone-5184.jpg");
+  }
+}
+.shot-of-truth .home .jumbotron .display-3,
+.shot-of-truth .home .jumbotron h2,
+.shot-of-truth .home .jumbotron p {
+  color: #F9F1E1;
+}
+.shot-of-truth .episode-page {
+  padding-top: 46px;
+  background-color: #fff;
+}
+.shot-of-truth .episode-page > h1 {
+  text-align: center;
+}
+.shot-of-truth .episode-page section {
+  max-width: 652px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shot-of-truth .episode-page .episode-subtitle,
+.shot-of-truth .episode-page .episode-date,
+.shot-of-truth .episode-page .episode-duration {
+  color: #2C0774;
+}
+.shot-of-truth .page-item.active .page-link {
+  background-color: #5B0CE2;
+  border-color: #2C0774;
+}
