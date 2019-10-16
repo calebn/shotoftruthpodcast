@@ -34,6 +34,17 @@ namespace shotoftruth {
 				<link rel="stylesheet" href="/styles.css">
 
 				<title><?=$title?></title>
+
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
+				<script>
+				  window.dataLayer = window.dataLayer || [];
+				  function gtag(){dataLayer.push(arguments);}
+				  gtag('js', new Date());
+
+				  gtag('config', 'UA-150299611-1');
+				</script>
+
 			</head>
 			<body class="shot-of-truth">
 				<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
