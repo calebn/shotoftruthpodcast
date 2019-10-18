@@ -1,7 +1,7 @@
 <?php
 namespace shotoftruth {
 	class ShotOfTruth {
-		const EPISODES_PER_PAGE = 10; //Changing this could break links to episodes page
+		const EPISODES_PER_PAGE = 10;
 		protected $site_sxe;
 		function __construct(string $rss_xml) {
 			if(empty($rss_xml)) {
@@ -12,12 +12,20 @@ namespace shotoftruth {
 			$this->site_sxe->registerXPathNamespace('content','http://purl.org/rss/1.0/modules/content/');
 		}
 
+		/**
+		 * Rebuilds the website pages
+		 * @return NULL
+		 */
 		public function regenSite() {
 			self::writeIndexPage();
 			self::writeAllEpisodePages();
 			self::writeEpisodeListPage();
 		}
 
+		/**
+		 * @param  string $title titile of the page
+		 * @return string The beginning of an HTML page
+		 */
 		public function getHeaderHtml(string $title) {
 			ob_start();
 			?>
@@ -59,7 +67,7 @@ namespace shotoftruth {
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+								<a class="nav-link" href="/">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/episodes.html">Episodes</a>
@@ -94,6 +102,10 @@ namespace shotoftruth {
 			return (trim(ob_get_clean()));
 		}
 
+		/**
+		 * Returns the footer html for the website
+		 * @return string Footer HTML
+		 */
 		public function getFooterHtml() {
 			ob_start();
 			?>
@@ -103,6 +115,7 @@ namespace shotoftruth {
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 			<script>
+				setNavActive();
 				if(window.location.href.indexOf('/episodes') > 0){
 					window.addEventListener('popstate', function(e){
 						console.log(e);
@@ -150,6 +163,14 @@ namespace shotoftruth {
 						return page;
 					}
 				}
+				function setNavActive() {
+					console.log('setting active');
+					if($('main.home').length) {
+						$('.nav-link[href="/"]').parent().addClass('active');
+					}else if ($('main.episode-page').length) {
+						$('.nav-link[href="/episodes.html"]').parent().addClass('active');
+					}
+				}
 			</script>
 		</body>
 		</html>
@@ -157,6 +178,7 @@ namespace shotoftruth {
 		return trim(ob_get_clean());
 	}
 
+	
 	public static function getEpisodeFilename(int $episode_number) {
 		return "$episode_number.html";
 	}
