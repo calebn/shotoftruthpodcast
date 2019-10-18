@@ -212,7 +212,7 @@ namespace shotoftruth {
 		 * @return string
 		 */
 		public function getEpisodePageHtml(\SimpleXMLElement $episode) {
-			$html = self::getHeaderHtml($episode->title);
+			$html = self::getHeaderHtml($episode->title.' - A Shot of Truth Podcast');
 			ob_start();
 			?>
 			<main class="episode-page">
@@ -437,7 +437,7 @@ namespace shotoftruth {
 				</div>
 			</main>
 			<?php
-			return self::getHeaderHtml("Episodes").trim(ob_get_clean()).self::getFooterHtml();
+			return self::getHeaderHtml("Episodes".' - A Shot of Truth Podcast').trim(ob_get_clean()).self::getFooterHtml();
 		}
 
 		/**
