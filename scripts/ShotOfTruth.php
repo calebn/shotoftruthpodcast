@@ -167,87 +167,108 @@ namespace shotoftruth {
 					console.log('setting active');
 					if($('main.home').length) {
 						$('.nav-link[href="/"]').parent().addClass('active');
-					}else if ($('main.episode-page').length) {
+					}else if ($('main.episodes-page').length) {
 						$('.nav-link[href="/episodes.html"]').parent().addClass('active');
 					}
 				}
 			</script>
-		</body>
-		</html>
-		<?php
-		return trim(ob_get_clean());
-	}
+			</body>
+			</html>
+			<?php
+			return trim(ob_get_clean());
+		}
 
-	
-	public static function getEpisodeFilename(int $episode_number) {
-		return "$episode_number.html";
-	}
+		/**
+		 * Gets the episode filename
+		 * @param int $episode_number
+		 * @return string Name of file based on episode number
+		 */
+		public static function getEpisodeFilename(int $episode_number) {
+			return "$episode_number.html";
+		}
 
-	public static function getEpisodeDescription(\SimpleXMLElement $episode, bool $include_contact_info = false) {
-		$description = $episode->xpath('content:encoded')[0];
-		if(
-			!$include_contact_info
-			&& ($idx = strpos($description, 'Find Us:')) !== false ) {
-			$description = rtrim(trim(substr($episode->xpath('content:encoded')[0], 0, $idx),'<br>'));
+		/**
+		 * Given an episode returns the description, optionally
+		 * strips of Find Us: section
+		 * @param \SimpleXMLElement $episode Episode XML Element
+		 * @param bool|bool $include_contact_info Whether to include Find Us section
+		 * @return string
+		 */
+		public static function getEpisodeDescription(\SimpleXMLElement $episode, bool $include_contact_info = false) {
+			$description = $episode->xpath('content:encoded')[0];
+			if(
+				!$include_contact_info
+				&& ($idx = strpos($description, 'Find Us:')) !== false ) {
+				$description = rtrim(trim(substr($episode->xpath('content:encoded')[0], 0, $idx),'<br>'));
+
+			}
+			$description = str_replace('Show Notes:', '<span class="show-notes">Show Notes:</span>', $description);
+			return trim($description);
+		}
+
+		/**
+		 * Gets the <main> content for an episode page
+		 * @param \SimpleXMLElement $episode Single Episode
+		 * @return string
+		 */
+		public function getEpisodePageHtml(\SimpleXMLElement $episode) {
+			$html = self::getHeaderHtml($episode->title);
+			ob_start();
+			?>
+			<main class="episode-page">
+				<section>
+					<h1 class="episode-title"><?=$episode->title?></h1>
+					<h2 class="episode-subtitle"><?=$episode->xpath('itunes:subtitle')[0]?></h2>
+					<h4 class="episode-date"><?=date('F j, Y',strtotime($episode->pubDate))?></h2>
+					<h4 class="episode-duration"><?=$episode->xpath('itunes:duration')[0]?></h2>
+
+					<article class="description">
+						<p><?=self::getEpisodeDescription($episode)?></p>
+					</article>
+				</section>
+				<section class="player-container">
+					<figure>
+						<figcaption>Listen Here:</figcaption>
+						<audio
+							controls
+							src="<?=$episode->enclosure->attributes()->url?>"
+							title="Listen to the episode, <?=$episode->title?> here"
+						>
+							Your browser does not support playing audio
+						</audio>
+					</figure>
+				</section>
+			</main>
+			<?php
+			$html .= trim(ob_get_clean()) . self::getFooterHtml();
+			return $html;
+		}
+
+		/**
+		 * Writes each episode page html to disk
+		 * @return null
+		 */
+		public function writeAllEpisodePages() {
+			$count =0;
+			foreach( $this->site_sxe->channel->item as $item) {
+				$html = self::getEpisodePageHtml($item);
+				file_put_contents(self::getEpisodeFilename($count++),$html);
+			}
 
 		}
-		$description = str_replace('Show Notes:', '<span class="show-notes">Show Notes:</span>', $description);
-		return trim($description);
-	}
 
-	public function getEpisodePageHtml(\SimpleXMLElement $episode) {
-		$html = self::getHeaderHtml($episode->title);
-		ob_start();
-		?>
-		<main class="episode-page">
-			<section>
-				<h1 class="episode-title"><?=$episode->title?></h1>
-				<h2 class="episode-subtitle"><?=$episode->xpath('itunes:subtitle')[0]?></h2>
-				<h4 class="episode-date"><?=date('F j, Y',strtotime($episode->pubDate))?></h2>
-				<h4 class="episode-duration"><?=$episode->xpath('itunes:duration')[0]?></h2>
-
-				<article class="description">
-					<p><?=self::getEpisodeDescription($episode)?></p>
-				</article>
-			</section>
-			<section class="player-container">
-				<figure>
-					<figcaption>Listen Here:</figcaption>
-					<audio
-						controls
-						src="<?=$episode->enclosure->attributes()->url?>"
-						title="Listen to the episode, <?=$episode->title?> here"
-					>
-					Your browser does not support playing audio
-				</audio>
-			</figure>
-		</section>
-	</main>
-	<?php
-	$html .= trim(ob_get_clean()) . self::getFooterHtml();
-	return $html;
-}
-
-public function writeAllEpisodePages() {
-	$count =0;
-	foreach( $this->site_sxe->channel->item as $item) {
-		$html = self::getEpisodePageHtml($item);
-		file_put_contents(self::getEpisodeFilename($count++),$html);
-	}
-
-}
-
-public function getIndexHtml() {
-	$html = self::getHeaderHtml('A Shot Of Truth Podcast');
-	ob_start();
-	?>
-	<main class="home">
-		<div class="jumbotron">
-			<div class="container">
-				<div class="row justify-content-center">
-							<!-- <div class="col-sm-4">
-								<img src="/images/home-logo.png" />
-							</div> -->
+		/**
+		 * Get HTML for index page
+		 * @return string
+		 */
+		public function getIndexHtml() {
+			$html = self::getHeaderHtml('A Shot Of Truth Podcast');
+			ob_start();
+			?>
+			<main class="home">
+				<div class="jumbotron">
+					<div class="container">
+						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<h1 class="display-3">A Shot Of Truth</h1>
 								<h2>With Victoria Matey Mendoza</h2>
@@ -299,14 +320,23 @@ public function getIndexHtml() {
 			</main>
 			<?php
 			return $html.(trim(ob_get_clean())).self::getFooterHtml();
-
 		}
 
+		/**
+		 * Writes the Index Page to disk
+		 * @return null
+		 */
 		public function writeIndexPage() {
 			file_put_contents('index.html', self::getIndexHtml());
 		}
 
-		public function getEpisodeCardHtml(\SimpleXMLElement $episode, $episode_num) {
+		/**
+		 * Gets HTML for single episode card
+		 * @param \SimpleXMLElement $episode Single Episode
+		 * @param int $episode_num number of episode
+		 * @return string
+		 */
+		public function getEpisodeCardHtml(\SimpleXMLElement $episode, int $episode_num) {
 			ob_start();
 			?>
 			<div class="card">
@@ -322,6 +352,12 @@ public function getIndexHtml() {
 			return trim(ob_get_clean());
 		}
 
+		/**
+		 * Gets HTML for a row of cards
+		 * @param array $cards HTML of each card in the row
+		 * @param int $page_num Page number for card row
+		 * @return string
+		 */
 		public static function getEpisodeCardRowHtml(array $cards, int $page_num) {
 			if($page_num < 1) {
 				throw new \InvalidArgumentException("page_num must be positive");
@@ -340,6 +376,11 @@ public function getIndexHtml() {
 			return trim(ob_get_clean());
 		}
 
+		/**
+		 * Gets pagination HTML
+		 * @param int $num_pages Number of pages to include
+		 * @return string
+		 */
 		public function getEpisodePagePagination(int $num_pages) {
 			ob_start();
 			?>
@@ -368,6 +409,10 @@ public function getIndexHtml() {
 			return trim(ob_get_clean());
 		}
 
+		/**
+		 * Gets main HTML for episodes page
+		 * @return string
+		 */
 		public function getAllEpisodeCardsHtml() {
 			$cards = [];
 			$count = 0;
@@ -382,7 +427,7 @@ public function getIndexHtml() {
 			$html = '';
 			ob_start();
 			?>
-			<main class="episode-page">
+			<main class="episodes-page">
 				<h1 class="main-heading">Episodes</h1>
 				<div id="episodes-container" class="row justify-content-center">
 					<div class="col-lg-6">
@@ -395,6 +440,10 @@ public function getIndexHtml() {
 			return self::getHeaderHtml("Episodes").trim(ob_get_clean()).self::getFooterHtml();
 		}
 
+		/**
+		 * Writes the Episodes page to disk
+		 * @return null
+		 */
 		public function writeEpisodeListPage() {
 			file_put_contents('episodes.html', self::getAllEpisodeCardsHtml());
 		}
