@@ -59,23 +59,23 @@
 .shot-of-truth .home .jumbotron p {
   color: #F9F1E1;
 }
-.shot-of-truth .episode-page {
+.shot-of-truth .episodes-page {
   padding-top: 46px;
   background-color: #fff;
 }
-.shot-of-truth .episode-page > h1 {
+.shot-of-truth .episodes-page > h1 {
   text-align: center;
 }
-.shot-of-truth .episode-page section {
+.shot-of-truth .episodes-page section {
   max-width: 652px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-.shot-of-truth .episode-page .episode-subtitle,
-.shot-of-truth .episode-page .episode-date,
-.shot-of-truth .episode-page .episode-duration {
+.shot-of-truth .episodes-page .episode-subtitle,
+.shot-of-truth .episodes-page .episode-date,
+.shot-of-truth .episodes-page .episode-duration {
   color: #2C0774;
 }
 .shot-of-truth .page-item.active .page-link {
