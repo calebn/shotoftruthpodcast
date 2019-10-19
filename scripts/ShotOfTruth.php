@@ -3,6 +3,7 @@ namespace shotoftruth {
 	class ShotOfTruth {
 		const EPISODES_PER_PAGE = 10;
 		protected $site_sxe;
+		protected $pages = [];
 		function __construct(string $rss_xml) {
 			if(empty($rss_xml)) {
 				throw new \InvalidArgumentException('rss_xml cannot be empty');
@@ -11,53 +12,82 @@ namespace shotoftruth {
 			$this->site_sxe->registerXPathNamespace('itunes','http://www.itunes.com/dtds/podcast-1.0.dtd');
 			$this->site_sxe->registerXPathNamespace('content','http://purl.org/rss/1.0/modules/content/');
 		}
-
 		/**
 		 * Rebuilds the website pages
 		 * @return NULL
 		 */
 		public function regenSite() {
+			$this->pages = [];
 			self::writeIndexPage();
 			self::writeAllEpisodePages();
 			self::writeEpisodeListPage();
+			self::writeSiteMap();
 		}
 
+		/**
+		 * Writes the site map xml to disk
+		 * @return null
+		 */
+		protected function writeSiteMap() {
+			file_put_contents('sitemap.xml',self::getSiteMapXML());
+		}
+
+		/**
+		 * Gets XML for site map
+		 * @return string
+		 */
+		protected function getSiteMapXML() {
+			$date_str = date("Y-m-d");
+			$writer = new \XMLWriter;
+			$writer->openURI('php://output');
+			$writer->startDocument('1.0', 'UTF-8');
+			$writer->setIndent(1);
+			$writer->startElement('urlset');
+				$writer->writeAttribute(
+					'xmlns',
+					'http://www.sitemaps.org/schemas/sitemap/0.9'
+				);
+			foreach($this->pages as $page) {
+				$writer->startElement('url');
+					$writer->writeElement('loc',"https://shotoftruthpodcast.com/$page");
+					$writer->writeElement('lastmod',$date_str);
+					$writer->writeElement('changefreq','weekly');
+				$writer->endElement();
+			}
+			$writer->endElement();
+			ob_start();
+			$writer->flush();
+			return ob_get_clean();
+		}
 		/**
 		 * @param  string $title titile of the page
 		 * @return string The beginning of an HTML page
 		 */
-		public function getHeaderHtml(string $title) {
+		protected function getHeaderHtml(string $title) {
 			ob_start();
 			?>
 			<!doctype html>
-
 			<html lang="en">
 			<head>
 				<!-- Required meta tags -->
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 				<!-- Bootstrap CSS -->
 				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 				<link rel="stylesheet" href="/styles.css">
-
 				<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 				<link rel="manifest" href="/site.webmanifest">
-
 				<title><?=$title?></title>
-
 				<!-- Global site tag (gtag.js) - Google Analytics -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
 				<script>
 				  window.dataLayer = window.dataLayer || [];
 				  function gtag(){dataLayer.push(arguments);}
 				  gtag('js', new Date());
-
 				  gtag('config', 'UA-150299611-1');
 				</script>
-
 			</head>
 			<body class="shot-of-truth">
 				<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -68,7 +98,6 @@ namespace shotoftruth {
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li class="nav-item">
@@ -100,18 +129,16 @@ namespace shotoftruth {
 					</form> -->
 				</div>
 			</nav>
-
 		</head>
 		<body>
 			<?php
 			return (trim(ob_get_clean()));
 		}
-
 		/**
 		 * Returns the footer html for the website
 		 * @return string Footer HTML
 		 */
-		public function getFooterHtml() {
+		protected function getFooterHtml() {
 			ob_start();
 			?>
 			<!-- Optional JavaScript -->
@@ -139,7 +166,6 @@ namespace shotoftruth {
 							window.scrollTo(0, 0);
 						});
 					});
-
 					function showEpisodeContainer(page, push_state) {
 						console.log('page entered: '+page);
 						let prev_page = Math.max(1,parseInt(page)-1);
@@ -157,7 +183,6 @@ namespace shotoftruth {
 							window.location = href;
 						}
 					}
-
 					function getPageFromUrl(url) {
 						console.log(url);
 						page = 1;
@@ -182,7 +207,6 @@ namespace shotoftruth {
 			<?php
 			return trim(ob_get_clean());
 		}
-
 		/**
 		 * Gets the episode filename
 		 * @param int $episode_number
@@ -191,7 +215,6 @@ namespace shotoftruth {
 		public static function getEpisodeFilename(int $episode_number) {
 			return "$episode_number.html";
 		}
-
 		/**
 		 * Given an episode returns the description, optionally
 		 * strips of Find Us: section
@@ -205,18 +228,16 @@ namespace shotoftruth {
 				!$include_contact_info
 				&& ($idx = strpos($description, 'Find Us:')) !== false ) {
 				$description = rtrim(trim(substr($episode->xpath('content:encoded')[0], 0, $idx),'<br>'));
-
 			}
 			$description = str_replace('Show Notes:', '<span class="show-notes">Show Notes:</span>', $description);
 			return trim($description);
 		}
-
 		/**
 		 * Gets the <main> content for an episode page
 		 * @param \SimpleXMLElement $episode Single Episode
 		 * @return string
 		 */
-		public function getEpisodePageHtml(\SimpleXMLElement $episode) {
+		protected function getEpisodePageHtml(\SimpleXMLElement $episode) {
 			$html = self::getHeaderHtml($episode->title.' - A Shot of Truth Podcast');
 			ob_start();
 			?>
@@ -226,7 +247,6 @@ namespace shotoftruth {
 					<h2 class="episode-subtitle"><?=$episode->xpath('itunes:subtitle')[0]?></h2>
 					<h4 class="episode-date"><?=date('F j, Y',strtotime($episode->pubDate))?></h2>
 					<h4 class="episode-duration"><?=$episode->xpath('itunes:duration')[0]?></h2>
-
 					<article class="description">
 						<p><?=self::getEpisodeDescription($episode)?></p>
 					</article>
@@ -248,25 +268,27 @@ namespace shotoftruth {
 			$html .= trim(ob_get_clean()) . self::getFooterHtml();
 			return $html;
 		}
-
 		/**
 		 * Writes each episode page html to disk
-		 * @return null
+		 * @return string[] Array of filenames written
 		 */
-		public function writeAllEpisodePages() {
+		protected function writeAllEpisodePages() {
 			$count =0;
+			$filenames = [];
 			foreach( $this->site_sxe->channel->item as $item) {
 				$html = self::getEpisodePageHtml($item);
-				file_put_contents(self::getEpisodeFilename($count++),$html);
+				$filename = self::getEpisodeFilename($count++);
+				file_put_contents($filename,$html);
+				$this->pages[] = $filename;
+				$filenames[] = $filename;
 			}
-
+			return $filenames;
 		}
-
 		/**
 		 * Get HTML for index page
 		 * @return string
 		 */
-		public function getIndexHtml() {
+		protected function getIndexHtml() {
 			$html = self::getHeaderHtml('A Shot Of Truth Podcast');
 			ob_start();
 			?>
@@ -326,22 +348,23 @@ namespace shotoftruth {
 			<?php
 			return $html.(trim(ob_get_clean())).self::getFooterHtml();
 		}
-
 		/**
 		 * Writes the Index Page to disk
 		 * @return null
 		 */
-		public function writeIndexPage() {
-			file_put_contents('index.html', self::getIndexHtml());
+		protected function writeIndexPage() {
+			$filename = 'index.html';
+			file_put_contents($filename, self::getIndexHtml());
+			$this->pages[] = $filename;
+			return $filename;
 		}
-
 		/**
 		 * Gets HTML for single episode card
 		 * @param \SimpleXMLElement $episode Single Episode
 		 * @param int $episode_num number of episode
 		 * @return string
 		 */
-		public function getEpisodeCardHtml(\SimpleXMLElement $episode, int $episode_num) {
+		protected function getEpisodeCardHtml(\SimpleXMLElement $episode, int $episode_num) {
 			ob_start();
 			?>
 			<div class="card">
@@ -356,7 +379,6 @@ namespace shotoftruth {
 			<?php
 			return trim(ob_get_clean());
 		}
-
 		/**
 		 * Gets HTML for a row of cards
 		 * @param array $cards HTML of each card in the row
@@ -380,13 +402,12 @@ namespace shotoftruth {
 			<?php
 			return trim(ob_get_clean());
 		}
-
 		/**
 		 * Gets pagination HTML
 		 * @param int $num_pages Number of pages to include
 		 * @return string
 		 */
-		public function getEpisodePagePagination(int $num_pages) {
+		protected function getEpisodePagePagination(int $num_pages) {
 			ob_start();
 			?>
 			<nav aria-label="Episodes Page Selector">
@@ -413,12 +434,11 @@ namespace shotoftruth {
 			<?php
 			return trim(ob_get_clean());
 		}
-
 		/**
 		 * Gets main HTML for episodes page
 		 * @return string
 		 */
-		public function getAllEpisodeCardsHtml() {
+		protected function getAllEpisodeCardsHtml() {
 			$cards = [];
 			$count = 0;
 			foreach($this->site_sxe->channel->item as $item) {
@@ -444,13 +464,15 @@ namespace shotoftruth {
 			<?php
 			return self::getHeaderHtml("Episodes".' - A Shot of Truth Podcast').trim(ob_get_clean()).self::getFooterHtml();
 		}
-
 		/**
 		 * Writes the Episodes page to disk
-		 * @return null
+		 * @return string Name of file written
 		 */
-		public function writeEpisodeListPage() {
-			file_put_contents('episodes.html', self::getAllEpisodeCardsHtml());
+		protected function writeEpisodeListPage() {
+			$filename = 'episodes.html';
+			file_put_contents($filename, self::getAllEpisodeCardsHtml());
+			$this->pages[] = $filename;
+			return $filename;
 		}
 	}
 }
