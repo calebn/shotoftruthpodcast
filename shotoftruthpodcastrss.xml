@@ -41,6 +41,7 @@
 			</content:encoded>
 			<enclosure length="29716814" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_000.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_000.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/0]]></link>
 			<pubDate>Wed, 13 Sep 2018 02:00:00 GMT</pubDate>
 			<itunes:duration>24:45</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -73,6 +74,7 @@
 			</content:encoded>
 			<enclosure length="292800000" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_001.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_001.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/1]]></link>
 			<pubDate>Wed, 19 Sep 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>32:03</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -149,6 +151,7 @@
 			</content:encoded>
 			<enclosure length="52651802" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_003.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_003.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/3]]></link>
 			<pubDate>Wed, 03 Oct 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>43:52</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -182,6 +185,7 @@
 			</content:encoded>
 			<enclosure length="52767785" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_004.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_004.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/4]]></link>
 			<pubDate>Wed, 17 Oct 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>43:58</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -209,6 +213,7 @@
 			</content:encoded>
 			<enclosure length="42305222" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_005.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_005.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/5]]></link>
 			<pubDate>Sat, 17 Nov 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>35:15</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -246,6 +251,7 @@
 			</content:encoded>
 			<enclosure length="56463067" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_006.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_006.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/6]]></link>
 			<pubDate>Thu, 6 Dec 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>47:03</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -277,6 +283,7 @@
 			</content:encoded>
 			<enclosure length="56020553" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_007.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_007.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/7]]></link>
 			<pubDate>Fri, 21 Dec 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>46:41</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -304,6 +311,7 @@
 			</content:encoded>
 			<enclosure length="29385581" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_008.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_008.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/8]]></link>
 			<pubDate>Fri, 28 Dec 2018 21:00:00 GMT</pubDate>
 			<itunes:duration>24:29</itunes:duration>
 			<itunes:explicit>no</itunes:explicit>
@@ -339,6 +347,7 @@
 			</content:encoded>
 			<enclosure length="74940520" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_009.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_009.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/9]]></link>
 			<pubDate>Wed, 16 Jan 2019 21:00:00 GMT</pubDate>
 			<itunes:duration>01:02:27</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -370,6 +379,7 @@
 			</content:encoded>
 			<enclosure length="72705483" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_010.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_010.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/10]]></link>
 			<pubDate>Mon, 11 Feb 2019 21:00:00 GMT</pubDate>
 			<itunes:duration>01:00:35</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -397,6 +407,7 @@
 			</content:encoded>
 			<enclosure length="53370169" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_011.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_011.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/11]]></link>
 			<pubDate>Wed, 27 Feb 2019 21:00:00 GMT</pubDate>
 			<itunes:duration>00:44:28</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -428,6 +439,7 @@
 			</content:encoded>
 			<enclosure length="64862479" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_012.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_012.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/12]]></link>
 			<pubDate>Tue, 02 Apr 2019 15:00:00 GMT</pubDate>
 			<itunes:duration>00:54:31</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -462,6 +474,7 @@
 			</content:encoded>
 			<enclosure length="45890267" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_013.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_013.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/13]]></link>
 			<pubDate>Sun, 21 Apr 2019 13:00:00 GMT</pubDate>
 			<itunes:duration>00:38:14</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -498,6 +511,7 @@
 			</content:encoded>
 			<enclosure length="69967328" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_014.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_014.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/14]]></link>
 			<pubDate>Wed, 08 May 2019 13:00:00 GMT</pubDate>
 			<itunes:duration>00:58:18</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -529,6 +543,7 @@
 			</content:encoded>
 			<enclosure length="59006871" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_015.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_015.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/15]]></link>
 			<pubDate>Mon, 08 Jun 2019 20:00:00 GMT</pubDate>
 			<itunes:duration>00:49:10</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -562,6 +577,7 @@
 			</content:encoded>
 			<enclosure length="66933989" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_016.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_016.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/16]]></link>
 			<pubDate>Mon, 24 Jun 2019 20:00:00 GMT</pubDate>
 			<itunes:duration>00:55:46</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -599,6 +615,7 @@
 			</content:encoded>
 			<enclosure length="90340226" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_017.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_017.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/17]]></link>
 			<pubDate>Tue, 15 Jul 2019 22:00:00 GMT</pubDate>
 			<itunes:duration>01:15:17</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -636,6 +653,7 @@
 			</content:encoded>
 			<enclosure length="85947806" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_018.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_018.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/18]]></link>
 			<pubDate>Thu, 08 Aug 2019 07:15:00 GMT</pubDate>
 			<itunes:duration>01:11:37</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -668,6 +686,7 @@
 			</content:encoded>
 			<enclosure length="77320275" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_019.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_019.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/19]]></link>
 			<pubDate>Thu, 04 Sep 2019 00:40:00 GMT</pubDate>
 			<itunes:duration>01:04:26</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -699,6 +718,7 @@
 			</content:encoded>
 			<enclosure length="19770430" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_020.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_020.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/20]]></link>
 			<pubDate>Tue, 17 Sep 2019 22:00:00 GMT</pubDate>
 			<itunes:duration>00:16:28</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -726,6 +746,7 @@
 			</content:encoded>
 			<enclosure length="70460520" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_021.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_021.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/21]]></link>
 			<pubDate>Fri, 11 Oct 2019 12:00:00 GMT</pubDate>
 			<itunes:duration>00:58:43</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
@@ -757,6 +778,7 @@
 			</content:encoded>
 			<enclosure length="44280602" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_022.mp3"/>
 			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_022.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/22]]></link>
 			<pubDate>Wed, 06 Nov 2019 12:00:00 GMT</pubDate>
 			<itunes:duration>00:36:53</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
