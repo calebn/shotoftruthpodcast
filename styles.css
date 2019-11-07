@@ -29,6 +29,17 @@
   color: #2C0774;
   text-decoration: underline!important;
 }
+.shot-of-truth section {
+  max-width: 652px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shot-of-truth figcaption {
+  color: #2C0774;
+}
 .shot-of-truth .btn-primary {
   background-color: #5B0CE2;
   color: #fff;
@@ -65,13 +76,6 @@
 }
 .shot-of-truth .episodes-page > h1 {
   text-align: center;
-}
-.shot-of-truth .episodes-page section {
-  max-width: 652px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .shot-of-truth .episodes-page .episode-subtitle,
 .shot-of-truth .episodes-page .episode-date,

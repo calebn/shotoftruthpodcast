@@ -91,7 +91,7 @@ namespace shotoftruth {
 			</head>
 			<body class="shot-of-truth">
 				<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="/">
 						<img src="images/home-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
 						A Shot Of Truth Podcast
 					</a>
@@ -104,7 +104,7 @@ namespace shotoftruth {
 								<a class="nav-link" href="/">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/episodes.html">Episodes</a>
+								<a class="nav-link" href="/<?=self::getPodcastsFilename()?>">Episodes</a>
 							</li>
 						<!--li class="nav-item">
 							<a class="nav-link" href="about-us.html">About Us</a>
@@ -148,7 +148,7 @@ namespace shotoftruth {
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 			<script>
 				setNavActive();
-				if(window.location.href.indexOf('/episodes') > 0){
+				if(window.location.href.indexOf('/<?=self::getPodcastsFilename()?>') > 0){
 					window.addEventListener('popstate', function(e){
 						console.log(e);
 						if(e.state){
@@ -198,7 +198,7 @@ namespace shotoftruth {
 					if($('main.home').length) {
 						$('.nav-link[href="/"]').parent().addClass('active');
 					}else if ($('main.episodes-page').length) {
-						$('.nav-link[href="/episodes.html"]').parent().addClass('active');
+						$('.nav-link[href="/<?=self::getPodcastsFilename()?>"]').parent().addClass('active');
 					}
 				}
 			</script>
@@ -209,11 +209,26 @@ namespace shotoftruth {
 		}
 		/**
 		 * Gets the episode filename
-		 * @param int $episode_number
-		 * @return string Name of file based on episode number
+		 * @param int  $episode_number
+		 * @param bool $include_extension Optional Whether or not to include the file extension
+		 * @return string                 Name of file based on episode number
 		 */
-		public static function getEpisodeFilename(int $episode_number) {
-			return "$episode_number.html";
+		public static function getEpisodeFilename(int $episode_number, bool $include_extension = false) {
+			$filename = "$episode_number";
+			$filename .= $include_extension ? '.html' : '';
+			return $filename;
+		}
+		/**
+		 * Gets the name of the podcast episodes page
+		 * @param bool $include_extension Optional Whether or not to include the file extension
+		 * @return string                 Name of podcast episodes page
+		 */
+		public static function getPodcastsFilename(bool $include_extension = false) {
+			$filename = 'podcasts';
+			$filename .= $include_extension ? '.html' : '';
+			return $filename;
+
+			return 'podcasts'. $include_extension ? '.html' : '';
 		}
 		/**
 		 * Given an episode returns the description, optionally
@@ -273,11 +288,12 @@ namespace shotoftruth {
 		 * @return string[] Array of filenames written
 		 */
 		protected function writeAllEpisodePages() {
-			$count =0;
+			$items = $this->site_sxe->xpath('//item');
+			$count = count($items);
 			$filenames = [];
-			foreach( $this->site_sxe->channel->item as $item) {
+			foreach( array_reverse($items) as $item) {
 				$html = self::getEpisodePageHtml($item);
-				$filename = self::getEpisodeFilename($count++);
+				$filename = self::getEpisodeFilename(--$count,true);
 				file_put_contents($filename,$html);
 				$this->pages[] = $filename;
 				$filenames[] = $filename;
@@ -440,9 +456,10 @@ namespace shotoftruth {
 		 */
 		protected function getAllEpisodeCardsHtml() {
 			$cards = [];
-			$count = 0;
-			foreach($this->site_sxe->channel->item as $item) {
-				$cards[] = self::getEpisodeCardHtml($item, $count++);
+			$items = $this->site_sxe->xpath('//item');
+			$count = count($items);
+			foreach(array_reverse($items) as $item) {
+				$cards[] = self::getEpisodeCardHtml($item, --$count);
 			}
 			$pages = array_chunk($cards,self::EPISODES_PER_PAGE);
 			$cards_html = '';
@@ -469,7 +486,7 @@ namespace shotoftruth {
 		 * @return string Name of file written
 		 */
 		protected function writeEpisodeListPage() {
-			$filename = 'episodes.html';
+			$filename = self::getPodcastsFilename(true);
 			file_put_contents($filename, self::getAllEpisodeCardsHtml());
 			$this->pages[] = $filename;
 			return $filename;
