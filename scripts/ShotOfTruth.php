@@ -104,7 +104,7 @@ namespace shotoftruth {
 								<a class="nav-link" href="/">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/<?=self::getPodcastsFilename()?>">Episodes</a>
+								<a class="nav-link" href="/<?=self::getPodcastsFilename()?>">Podcast Episodes</a>
 							</li>
 						<!--li class="nav-item">
 							<a class="nav-link" href="about-us.html">About Us</a>
@@ -150,10 +150,10 @@ namespace shotoftruth {
 				setNavActive();
 				if(window.location.href.indexOf('/<?=self::getPodcastsFilename()?>') > 0){
 					window.addEventListener('popstate', function(e){
-						console.log(e);
+						// console.log(e);
 						if(e.state){
 							page = getPageFromUrl(e.state.href);
-							console.log('pushing '+page);
+							// console.log('pushing '+page);
 							showEpisodeContainer(page,false);
 						}
 					});
@@ -167,11 +167,11 @@ namespace shotoftruth {
 						});
 					});
 					function showEpisodeContainer(page, push_state) {
-						console.log('page entered: '+page);
+						// console.log('page entered: '+page);
 						let prev_page = Math.max(1,parseInt(page)-1);
-						console.log(prev_page);
+						// console.log(prev_page);
 						let next_page = Math.min($('.page-link').length -2, parseInt(page)+1);
-						console.log(next_page);
+						// console.log(next_page);
 						$('.episode-container').hide();
 						$('#episodes-container-'+page).show();
 						$('.page-item').removeClass('active');
@@ -184,17 +184,17 @@ namespace shotoftruth {
 						}
 					}
 					function getPageFromUrl(url) {
-						console.log(url);
+						// console.log(url);
 						page = 1;
 						if(url.indexOf('#') > 0) {
 							page = url.substring(url.indexOf('#')+1);
 						}
-						console.log(page);
+						// console.log(page);
 						return page;
 					}
 				}
 				function setNavActive() {
-					console.log('setting active');
+					// console.log('setting active');
 					if($('main.home').length) {
 						$('.nav-link[href="/"]').parent().addClass('active');
 					}else if ($('main.episodes-page').length) {
