@@ -19,6 +19,7 @@ namespace shotoftruth {
 		public function regenSite() {
 			$this->pages = [];
 			self::writeIndexPage();
+			self::writeAboutPage();
 			self::writeAllEpisodePages();
 			self::writeEpisodeListPage();
 			self::writeSiteMap();
@@ -43,15 +44,15 @@ namespace shotoftruth {
 			$writer->startDocument('1.0', 'UTF-8');
 			$writer->setIndent(1);
 			$writer->startElement('urlset');
-				$writer->writeAttribute(
-					'xmlns',
-					'http://www.sitemaps.org/schemas/sitemap/0.9'
-				);
+			$writer->writeAttribute(
+				'xmlns',
+				'http://www.sitemaps.org/schemas/sitemap/0.9'
+			);
 			foreach($this->pages as $page) {
 				$writer->startElement('url');
-					$writer->writeElement('loc',"https://shotoftruthpodcast.com/$page");
-					$writer->writeElement('lastmod',$date_str);
-					$writer->writeElement('changefreq','weekly');
+				$writer->writeElement('loc',"https://shotoftruthpodcast.com/$page");
+				$writer->writeElement('lastmod',$date_str);
+				$writer->writeElement('changefreq','weekly');
 				$writer->endElement();
 			}
 			$writer->endElement();
@@ -83,10 +84,10 @@ namespace shotoftruth {
 				<!-- Global site tag (gtag.js) - Google Analytics -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
 				<script>
-				  window.dataLayer = window.dataLayer || [];
-				  function gtag(){dataLayer.push(arguments);}
-				  gtag('js', new Date());
-				  gtag('config', 'UA-150299611-1');
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-150299611-1');
 				</script>
 			</head>
 			<body class="shot-of-truth">
@@ -105,6 +106,9 @@ namespace shotoftruth {
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="/<?=self::getPodcastsFilename()?>">Podcast Episodes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/about">About</a>
 							</li>
 						<!--li class="nav-item">
 							<a class="nav-link" href="about-us.html">About Us</a>
@@ -129,8 +133,6 @@ namespace shotoftruth {
 					</form> -->
 				</div>
 			</nav>
-		</head>
-		<body>
 			<?php
 			return (trim(ob_get_clean()));
 		}
@@ -199,14 +201,16 @@ namespace shotoftruth {
 						$('.nav-link[href="/"]').parent().addClass('active');
 					}else if ($('main.episodes-page').length) {
 						$('.nav-link[href="/<?=self::getPodcastsFilename()?>"]').parent().addClass('active');
+					} else if ($('main.about').length){
+						$('.nav-link[href="/about"]').parent().addClass('active');	
 					}
 				}
 			</script>
-			</body>
-			</html>
-			<?php
-			return trim(ob_get_clean());
-		}
+		</body>
+		</html>
+		<?php
+		return trim(ob_get_clean());
+	}
 		/**
 		 * Gets the episode filename
 		 * @param int  $episode_number
@@ -261,28 +265,28 @@ namespace shotoftruth {
 					<h1 class="episode-title"><?=$episode->title?></h1>
 					<h2 class="episode-subtitle"><?=$episode->xpath('itunes:subtitle')[0]?></h2>
 					<h4 class="episode-date"><?=date('F j, Y',strtotime($episode->pubDate))?></h2>
-					<h4 class="episode-duration"><?=$episode->xpath('itunes:duration')[0]?></h2>
-					<article class="description">
-						<p><?=self::getEpisodeDescription($episode)?></p>
-					</article>
-				</section>
-				<section class="player-container">
-					<figure>
-						<figcaption>Listen Here:</figcaption>
-						<audio
-							controls
-							src="<?=$episode->enclosure->attributes()->url?>"
-							title="Listen to the episode, <?=$episode->title?> here"
-						>
-							Your browser does not support playing audio
-						</audio>
-					</figure>
-				</section>
-			</main>
-			<?php
-			$html .= trim(ob_get_clean()) . self::getFooterHtml();
-			return $html;
-		}
+						<h4 class="episode-duration"><?=$episode->xpath('itunes:duration')[0]?></h2>
+							<article class="description">
+								<p><?=self::getEpisodeDescription($episode)?></p>
+							</article>
+						</section>
+						<section class="player-container">
+							<figure>
+								<figcaption>Listen Here:</figcaption>
+								<audio
+								controls
+								src="<?=$episode->enclosure->attributes()->url?>"
+								title="Listen to the episode, <?=$episode->title?> here"
+								>
+								Your browser does not support playing audio
+							</audio>
+						</figure>
+					</section>
+				</main>
+				<?php
+				$html .= trim(ob_get_clean()) . self::getFooterHtml();
+				return $html;
+			}
 		/**
 		 * Writes each episode page html to disk
 		 * @return string[] Array of filenames written
@@ -334,6 +338,7 @@ namespace shotoftruth {
 									<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/I3zqct2jo7tthib57vpvuxptr6y?t%3DA_Shot_Of_Truth%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" class="card-link">Google Play</a>
 									<a href="https://www.stitcher.com/s?fid=235842&refid=stpr" class="card-link">Stitcher</a>
 									<a href="https://soundcloud.com/sudo-science/sets/a-shot-of-truth-podcast" class="card-link">SoundCloud</a>
+									<a href="/shotoftruhpodcastrss.xml" class="card-link">RSS Feed</a>
 								</div>
 							</div>
 						</div>
@@ -365,12 +370,41 @@ namespace shotoftruth {
 			return $html.(trim(ob_get_clean())).self::getFooterHtml();
 		}
 		/**
+		 * Get HTML for about page
+		 * @return string
+		 */
+		protected function getaboutHtml() {
+			$html = self::getHeaderHtml('About | A Shot Of Truth Podcast');
+			ob_start();
+			?>
+			<main class="about">
+				<header role="banner">
+					<h1>About</h1>
+				</header>
+				<section>
+					<p>Victoria Matey Mendoza is an Undocumented Queer Womxn of Color dedicated to working with her community. In addition to hosting A Shot of Truth Podcast she has twice been a TEDx speaker. She is a Western Washington University Alumna, President of Blue Group 2016-2017, Changemaker Fellow 2017-2018 and Dream Lead Institute Fellow 2018-2019. She has been speaking for four years on various topics within the undocumented narrative—from higher education to border imperialism to detention centers.</p>
+				</section>
+			</main>
+			<?php
+			return $html.(trim(ob_get_clean())).self::getFooterHtml();
+		}
+		/**
 		 * Writes the Index Page to disk
 		 * @return null
 		 */
 		protected function writeIndexPage() {
 			$filename = 'index.html';
 			file_put_contents($filename, self::getIndexHtml());
+			$this->pages[] = $filename;
+			return $filename;
+		}
+		/**
+		 * Writes the About Page to disk
+		 * @return null
+		 */
+		protected function writeAboutPage() {
+			$filename = 'about.html';
+			file_put_contents($filename, self::getAboutHtml());
 			$this->pages[] = $filename;
 			return $filename;
 		}

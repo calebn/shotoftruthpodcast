@@ -70,6 +70,10 @@
 .shot-of-truth .home .jumbotron p {
   color: #F9F1E1;
 }
+.shot-of-truth .about h1 {
+  margin-top: 143px;
+  text-align: center;
+}
 .shot-of-truth .episodes-page {
   padding-top: 46px;
   background-color: #fff;
