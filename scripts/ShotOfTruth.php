@@ -338,7 +338,7 @@ namespace shotoftruth {
 									<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/I3zqct2jo7tthib57vpvuxptr6y?t%3DA_Shot_Of_Truth%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" class="card-link">Google Play</a>
 									<a href="https://www.stitcher.com/s?fid=235842&refid=stpr" class="card-link">Stitcher</a>
 									<a href="https://soundcloud.com/sudo-science/sets/a-shot-of-truth-podcast" class="card-link">SoundCloud</a>
-									<a href="/shotoftruhpodcastrss.xml" class="card-link">RSS Feed</a>
+									<a href="/shotoftruthpodcastrss.xml" class="card-link">RSS Feed</a>
 								</div>
 							</div>
 						</div>
