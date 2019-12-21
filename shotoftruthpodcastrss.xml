@@ -773,5 +773,35 @@
 			<itunes:duration>00:47:16</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>Knowledge Sharing by Young Professionals</itunes:title>
+			<title>Knowledge Sharing by Young Professionals</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Beyond HB1079 Conference Part 2</itunes:subtitle>
+			<itunes:summary>On a way way lighter note--Let’s rewind to the Beyond HB1079 Conference! We’re back to share part two of this series! In this episode, we interview mostly young professionals knowledge sharing about their experience in higher education. Many of them are currently working towards getting their master’s degrees. Many share information about themselves, their motivations, their view of liberation and all. We also got exclusive footage with the two head organizers of the Beyond HB1079 Conference!</itunes:summary>
+			<description>On a way way lighter note--Let’s rewind to the Beyond HB1079 Conference! We’re back to share part two of this series! In this episode, we interview mostly young professionals knowledge sharing about their experience in higher education. Many of them are currently working towards getting their master’s degrees. Many share information about themselves, their motivations, their view of liberation and all. We also got exclusive footage with the two head organizers of the Beyond HB1079 Conference!</description>
+			<content:encoded><![CDATA[On a way way lighter note--Let’s rewind to the Beyond HB1079 Conference! We’re back to share part two of this series! In this episode, we interview mostly young professionals knowledge sharing about their experience in higher education. Many of them are currently working towards getting their master’s degrees. Many share information about themselves, their motivations, their view of liberation and all. We also got exclusive footage with the two head organizers of the Beyond HB1079 Conference!
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://www.beyondhb1079.com/">Beyond HB1079 Conference</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="38980357" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_024.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_024.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/24]]></link>
+			<pubDate>Fri, 20 Nov 2019 03:25:00 GMT</pubDate>
+			<itunes:duration>00:32:29</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
