@@ -803,5 +803,35 @@
 			<itunes:duration>00:32:29</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>La Mera Rocha: Lots of Heart and Real Talk</itunes:title>
+			<title>La Mera Rocha: Lots of Heart and Real Talk</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>An Interview with Erika Rocha</itunes:subtitle>
+			<itunes:summary>We welcome Erika Rocha to the show—prepare to laugh, cry and be inspired by a powerful individual! Erika is currently the Texas State Director for Swing Left working hard to turn the state of Texas blue. She talks about what it was like to learn English when she first arrived. Stories and Dreams about her childhood. Walking the aisle on her wedding day without her father.  Translating and helping her mother through cancer treatments. Erika is resilient, intelligent, funny—she invokes a lot of emotion. We are so inspired by her. Enjoy La Mera Rocha.</itunes:summary>
+			<description>We welcome Erika Rocha to the show—prepare to laugh, cry and be inspired by a powerful individual! Erika is currently the Texas State Director for Swing Left working hard to turn the state of Texas blue. She talks about what it was like to learn English when she first arrived. Stories and Dreams about her childhood. Walking the aisle on her wedding day without her father.  Translating and helping her mother through cancer treatments. Erika is resilient, intelligent, funny—she invokes a lot of emotion. We are so inspired by her. Enjoy La Mera Rocha.</description>
+			<content:encoded><![CDATA[We welcome Erika Rocha to the show—prepare to laugh, cry and be inspired by a powerful individual! Erika is currently the Texas State Director for Swing Left working hard to turn the state of Texas blue. She talks about what it was like to learn English when she first arrived. Stories and Dreams about her childhood. Walking the aisle on her wedding day without her father.  Translating and helping her mother through cancer treatments. Erika is resilient, intelligent, funny—she invokes a lot of emotion. We are so inspired by her. Enjoy La Mera Rocha.
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://swingleft.org">Swing Left</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="64510348" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_025.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_025.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/25]]></link>
+			<pubDate>Wed, 09 Jan 2020 18:30:00 GMT</pubDate>
+			<itunes:duration>00:53:45</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
