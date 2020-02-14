@@ -833,5 +833,35 @@
 			<itunes:duration>00:53:45</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>Yellow is My Favorite Color</itunes:title>
+			<title>Yellow is My Favorite Color</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>An Interview with Francia Orozco</itunes:subtitle>
+			<itunes:summary>It’s hard to be vulnerable. It’s hard to express the array of emotions we feel when being undocumented. Francia Orozco has been using art to express vulnerability, sadness, and activism. She has known her entire life that she was meant to be an artist. She has the passion and urges to create art that represents the people from her community from migrant workers to womxn in nature. With bright colors and the beauty of nature--Francia has created art that is influenced by her Mexican heritage. She defined it as always longing for home--join us in My Favorite Color is Yellow.</itunes:summary>
+			<description>It’s hard to be vulnerable. It’s hard to express the array of emotions we feel when being undocumented. Francia Orozco has been using art to express vulnerability, sadness, and activism. She has known her entire life that she was meant to be an artist. She has the passion and urges to create art that represents the people from her community from migrant workers to womxn in nature. With bright colors and the beauty of nature--Francia has created art that is influenced by her Mexican heritage. She defined it as always longing for home--join us in My Favorite Color is Yellow.</description>
+			<content:encoded><![CDATA[It’s hard to be vulnerable. It’s hard to express the array of emotions we feel when being undocumented. Francia Orozco has been using art to express vulnerability, sadness, and activism. She has known her entire life that she was meant to be an artist. She has the passion and urges to create art that represents the people from her community from migrant workers to womxn in nature. With bright colors and the beauty of nature--Francia has created art that is influenced by her Mexican heritage. She defined it as always longing for home--join us in My Favorite Color is Yellow.
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://www.instagram.com/Thee_Franceart/">Francia's Instagram</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="34955410" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_026.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_026.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/25]]></link>
+			<pubDate>Thu, 13 Feb 2020 18:30:00 GMT</pubDate>
+			<itunes:duration>00:29:07</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
