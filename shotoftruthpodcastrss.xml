@@ -893,5 +893,40 @@
 			<itunes:duration>00:56:48</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>El Centro y El Census</itunes:title>
+			<title>El Centro y El Census</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>The 2020 Census</itunes:subtitle>
+			<itunes:summary>Happy National Census Day! We were invited to El Centro Latino three weeks ago to learn about the census in community! The Census is complex and easy all at the same time--we promise! Learn about the process and history of the Census along with the involvement of communities to ensure their people get counted! We also unpack who are the people not being counted along with the process of jails and detention centers. It’s a lot of information but something that will affect you for the next ten years. Check out this episode created with and by community to share knowledge and faith in all this. Happy Censusing friends!</itunes:summary>
+			<description>Happy National Census Day! We were invited to El Centro Latino three weeks ago to learn about the census in community! The Census is complex and easy all at the same time--we promise! Learn about the process and history of the Census along with the involvement of communities to ensure their people get counted! We also unpack who are the people not being counted along with the process of jails and detention centers. It’s a lot of information but something that will affect you for the next ten years. Check out this episode created with and by community to share knowledge and faith in all this. Happy Censusing friends!</description>
+			<content:encoded><![CDATA[Happy National Census Day! We were invited to El Centro Latino three weeks ago to learn about the census in community! The Census is complex and easy all at the same time--we promise! Learn about the process and history of the Census along with the involvement of communities to ensure their people get counted! We also unpack who are the people not being counted along with the process of jails and detention centers. It’s a lot of information but something that will affect you for the next ten years. Check out this episode created with and by community to share knowledge and faith in all this. Happy Censusing friends!
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://2020census.gov/en/data-protection.html">How the Census Bureau Protects Your Data</a><br>
+				<a href="https://www.washingtonpost.com/news/retropolis/wp/2018/04/03/secret-use-of-census-info-helped-send-japanese-americans-to-internment-camps-in-wwii/">Secret use of census info helped send Japanese Americans to internment camps in WWII</a><br>
+				<a href="https://www.census.gov/history/www/genealogy/decennial_census_records/the_72_year_rule_1.html">The 72-Year Rule</a><br>
+				<a href="https://2020census.gov/">2020census.gov</a><br>
+				<a href="https://www.clatino.org/">clatino.org</a><br>
+				<a href="https://www.clatino.org/make-yourself-count-census-2020.html">Centro Latino Census Page</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="35077663" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_028.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_028.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/28]]></link>
+			<pubDate>Wed, 01 Apr 2020 04:45:00 GMT</pubDate>
+			<itunes:duration>00:29:13</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
