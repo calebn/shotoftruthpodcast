@@ -20,6 +20,31 @@
 		</itunes:category>
 		<itunes:explicit>yes</itunes:explicit>
 		<item>
+			<itunes:episodeType>trailer</itunes:episodeType>
+			<itunes:title>A Shot of Truth Podcast Trailer</itunes:title>
+			<title>A Shot of Truth Podcast Trailer</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>A trailer for A Shot of Truth Podcast.</itunes:subtitle>
+			<itunes:summary>Welcome to a Shot of Truth Podcast! Listen in to learn a little more about our life stories and experiences. In addition, we bring in voices from other undoc-folks and expand on the different identities/intersectionalities within our community. We acknowledge that this is not single issue struggle and would also love for other organizers, activist, and community members to chime in on our conversations. Thank you in advance for listening!</itunes:summary>
+			<description>Welcome to a Shot of Truth Podcast! Listen in to learn a little more about our life stories and experiences. In addition, we bring in voices from other undoc-folks and expand on the different identities/intersectionalities within our community. We acknowledge that this is not single issue struggle and would also love for other organizers, activist, and community members to chime in on our conversations. Thank you in advance for listening!</description>
+			<content:encoded><![CDATA[Welcome to a Shot of Truth Podcast! Listen in to learn a little more about our life stories and experiences. In addition, we bring in voices from other undoc-folks and expand on the different identities/intersectionalities within our community. We acknowledge that this is not single issue struggle and would also love for other organizers, activist, and community members to chime in on our conversations. Thank you in advance for listening!
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="29716814" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_trailer.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_trailer.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/trailer]]></link>
+			<pubDate>Wed, 13 Sep 2018 02:00:00 GMT</pubDate>
+			<itunes:duration>24:45</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
+		<item>
 			<itunes:episodeType>full</itunes:episodeType>
 			<itunes:title>An Introduction</itunes:title>
 			<title>An Introduction</title>

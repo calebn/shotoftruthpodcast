@@ -218,7 +218,11 @@ namespace shotoftruth {
 		 * @return string                 Name of file based on episode number
 		 */
 		public static function getEpisodeFilename(int $episode_number, bool $include_extension = false) {
-			$filename = "$episode_number";
+			if ( $episode_number < 0 ) {
+				$filename = 'trailer';
+			} else {
+				$filename = "$episode_number";
+			}
 			$filename .= $include_extension ? '.html' : '';
 			return $filename;
 		}
@@ -293,7 +297,7 @@ namespace shotoftruth {
 		 */
 		protected function writeAllEpisodePages() {
 			$items = $this->site_sxe->xpath('//item');
-			$count = count($items);
+			$count = count($items) -1;
 			$filenames = [];
 			foreach( array_reverse($items) as $item) {
 				$html = self::getEpisodePageHtml($item);
@@ -491,7 +495,7 @@ namespace shotoftruth {
 		protected function getAllEpisodeCardsHtml() {
 			$cards = [];
 			$items = $this->site_sxe->xpath('//item');
-			$count = count($items);
+			$count = count($items) -1;
 			foreach(array_reverse($items) as $item) {
 				$cards[] = self::getEpisodeCardHtml($item, --$count);
 			}
