@@ -60,11 +60,35 @@ namespace shotoftruth {
 			$writer->flush();
 			return ob_get_clean();
 		}
+
+		protected function getOpenGraphTags(string $title, string $url, \SimpleXMLElement $episode = null) {
+			$og_title = $title;
+			$og_image = 'https://shotoftruthpodcast.com/images/home-logo.png';
+			$og_type = 'website';
+			$og_url = $url;
+			ob_start();
+			?>
+				<meta property="og:title" content="<?=$og_title?>" />
+				<meta property="og:type" content="<?=$og_type?>" />
+				<meta property="og:url" content="<?=$og_url?>" />
+				<meta property="og:image" content="<?=$og_image?>" />
+			<?php
+			if (!is_null($episode)) {
+				$og_audio_url = (string)$episode->enclosure->attributes()->url[0];
+				$og_description = $episode->xpath('itunes:subtitle')[0];
+				?>
+				<meta property="og:audio" content="<?=$og_audio_url?>" />
+				<meta property="og:description"  content="<?=$og_description?>" />
+				<?php
+			}
+			return trim(ob_get_clean());
+		}
+
 		/**
 		 * @param  string $title titile of the page
 		 * @return string The beginning of an HTML page
 		 */
-		protected function getHeaderHtml(string $title) {
+		protected function getHeaderHtml(string $title, $url, \SimpleXMLElement $episode = null) {
 			ob_start();
 			?>
 			<!doctype html>
@@ -81,6 +105,7 @@ namespace shotoftruth {
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 				<link rel="manifest" href="/site.webmanifest">
 				<title><?=$title?></title>
+				<?=self::getOpenGraphTags($title, $url, $episode)?>
 				<!-- Global site tag (gtag.js) - Google Analytics -->
 				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
 				<script>
@@ -260,8 +285,8 @@ namespace shotoftruth {
 		 * @param \SimpleXMLElement $episode Single Episode
 		 * @return string
 		 */
-		protected function getEpisodePageHtml(\SimpleXMLElement $episode) {
-			$html = self::getHeaderHtml($episode->title.' - A Shot of Truth Podcast');
+		protected function getEpisodePageHtml(\SimpleXMLElement $episode, int $episode_number) {
+			$html = self::getHeaderHtml($episode->title.' - A Shot of Truth Podcast', 'https://shotoftruthpodcast.com/'.self::getEpisodeFilename($episode_number), $episode);
 			ob_start();
 			?>
 			<main class="episode-page">
@@ -300,8 +325,8 @@ namespace shotoftruth {
 			$count = count($items) -1;
 			$filenames = [];
 			foreach( array_reverse($items) as $item) {
-				$html = self::getEpisodePageHtml($item);
-				$filename = self::getEpisodeFilename(--$count,true);
+				$html = self::getEpisodePageHtml($item, --$count);
+				$filename = self::getEpisodeFilename($count,true);
 				file_put_contents($filename,$html);
 				$this->pages[] = $filename;
 				$filenames[] = $filename;
@@ -313,7 +338,7 @@ namespace shotoftruth {
 		 * @return string
 		 */
 		protected function getIndexHtml() {
-			$html = self::getHeaderHtml('A Shot Of Truth Podcast');
+			$html = self::getHeaderHtml('A Shot Of Truth Podcast','https://shotoftruthpodcast.com');
 			ob_start();
 			?>
 			<main class="home">
@@ -378,7 +403,7 @@ namespace shotoftruth {
 		 * @return string
 		 */
 		protected function getaboutHtml() {
-			$html = self::getHeaderHtml('About | A Shot Of Truth Podcast');
+			$html = self::getHeaderHtml('About | A Shot Of Truth Podcast', 'https://shotoftruthpodcast.com/about');
 			ob_start();
 			?>
 			<main class="about">
@@ -517,7 +542,7 @@ namespace shotoftruth {
 				</div>
 			</main>
 			<?php
-			return self::getHeaderHtml("Episodes".' - A Shot of Truth Podcast').trim(ob_get_clean()).self::getFooterHtml();
+			return self::getHeaderHtml("Episodes".' - A Shot of Truth Podcast', 'https://www.shotoftruthpodcast.com/podcasts').trim(ob_get_clean()).self::getFooterHtml();
 		}
 		/**
 		 * Writes the Episodes page to disk
