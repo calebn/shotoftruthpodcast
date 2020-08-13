@@ -67,18 +67,25 @@ namespace shotoftruth {
 			$og_type = 'website';
 			$og_url = $url;
 			ob_start();
-			?>
+			if (!is_null($episode)) {
+				$og_type = 'audio/mpeg';
+				$og_audio_url = (string)$episode->enclosure->attributes()->url[0];
+				$og_description = $episode->xpath('itunes:subtitle')[0];
+				?>
 				<meta property="og:title" content="<?=$og_title?>" />
 				<meta property="og:type" content="<?=$og_type?>" />
 				<meta property="og:url" content="<?=$og_url?>" />
 				<meta property="og:image" content="<?=$og_image?>" />
-			<?php
-			if (!is_null($episode)) {
-				$og_audio_url = (string)$episode->enclosure->attributes()->url[0];
-				$og_description = $episode->xpath('itunes:subtitle')[0];
-				?>
 				<meta property="og:audio" content="<?=$og_audio_url?>" />
+				<meta property="og:audio:secure_url" content="<?=$og_audio_url?>" />
 				<meta property="og:description"  content="<?=$og_description?>" />
+				<?php
+			} else {
+				?>
+				<meta property="og:title" content="<?=$og_title?>" />
+				<meta property="og:type" content="<?=$og_type?>" />
+				<meta property="og:url" content="<?=$og_url?>" />
+				<meta property="og:image" content="<?=$og_image?>" />
 				<?php
 			}
 			return trim(ob_get_clean());
