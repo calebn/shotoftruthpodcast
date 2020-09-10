@@ -1075,5 +1075,35 @@
 			<itunes:duration>00:44:33</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>That Lawyer Guy</itunes:title>
+			<title>That Lawyer Guy</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Interview with Luis Cortes</itunes:subtitle>
+			<itunes:summary>You may know him from the Supreme Court DACA case. Orrr you may know him as a professor. I know him as a punk rocker!! Luis Cortes has joined us today to talk about his journey as an educator and lawyer. He shares with us how he got involved in teaching, how he navigated law school, and all the details about DACA. The day of the court case, the days leading up to it, and the present. This episode is full of laughter, good stories, and some real talk about dating, being in the spotlight and more. Thank you so much Luis for sharing all your wisdom and words of hope. This episode is fire!</itunes:summary>
+			<description>You may know him from the Supreme Court DACA case. Orrr you may know him as a professor. I know him as a punk rocker!! Luis Cortes has joined us today to talk about his journey as an educator and lawyer. He shares with us how he got involved in teaching, how he navigated law school, and all the details about DACA. The day of the court case, the days leading up to it, and the present. This episode is full of laughter, good stories, and some real talk about dating, being in the spotlight and more. Thank you so much Luis for sharing all your wisdom and words of hope. This episode is fire!</description>
+			<content:encoded><![CDATA[You may know him from the Supreme Court DACA case. Orrr you may know him as a professor. I know him as a punk rocker!! Luis Cortes has joined us today to talk about his journey as an educator and lawyer. He shares with us how he got involved in teaching, how he navigated law school, and all the details about DACA. The day of the court case, the days leading up to it, and the present. This episode is full of laughter, good stories, and some real talk about dating, being in the spotlight and more. Thank you so much Luis for sharing all your wisdom and words of hope. This episode is fire!
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://twitter.com/LCortesRomero">Luis Cortes on twitter</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="134030544" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_033.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_033.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/33]]></link>
+			<pubDate>Thu, 10 Sep 2020 07:18:00 GMT</pubDate>
+			<itunes:duration>01:51:41</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
