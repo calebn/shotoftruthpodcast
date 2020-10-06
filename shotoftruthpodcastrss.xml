@@ -1105,5 +1105,35 @@
 			<itunes:duration>01:51:41</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>Lessons With Kamau</itunes:title>
+			<title>Lessons With Kamau</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Interview with Kamau Chege</itunes:subtitle>
+			<itunes:summary>Kamau Chege is not only the Managing Director at Washington Census Alliance, he's also a freaking genius and a great brother. Kamau gave us a whole history lesson on immigration being tied to reconstruction, democracy and human rights. Kamau illustrates the parallels of a multi-racial democracy and the polarization within class. He shares with us how this pandemic is impacting people and the impact it will have on the election. Check out this super informative and amazing episode with Kamau Chege! Let’s @ him on Twitter!</itunes:summary>
+			<description>Kamau Chege is not only the Managing Director at Washington Census Alliance, he's also a freaking genius and a great brother. Kamau gave us a whole history lesson on immigration being tied to reconstruction, democracy and human rights. Kamau illustrates the parallels of a multi-racial democracy and the polarization within class. He shares with us how this pandemic is impacting people and the impact it will have on the election. Check out this super informative and amazing episode with Kamau Chege! Let’s @ him on Twitter!</description>
+			<content:encoded><![CDATA[Kamau Chege is not only the Managing Director at Washington Census Alliance, he's also a freaking genius and a great brother. Kamau gave us a whole history lesson on immigration being tied to reconstruction, democracy and human rights. Kamau illustrates the parallels of a multi-racial democracy and the polarization within class. He shares with us how this pandemic is impacting people and the impact it will have on the election. Check out this super informative and amazing episode with Kamau Chege! Let’s @ him on Twitter!
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://twitter.com/kamaumaumau">Kamau Chege on twitter</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="72621891" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_034.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_034.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/34]]></link>
+			<pubDate>Tue, 06 Oct 2020 19:10:00 GMT</pubDate>
+			<itunes:duration>01:00:31</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
