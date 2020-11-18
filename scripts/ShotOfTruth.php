@@ -25,22 +25,15 @@ namespace shotoftruth {
 			self::writeSiteMap();
 		}
 
-		/**
-		 * Writes the site map xml to disk
-		 * @return null
-		 */
-		protected function writeSiteMap() {
-			file_put_contents('sitemap.xml',self::getSiteMapXML());
-		}
 
 		/**
-		 * Gets XML for site map
+		 * Writes XML for site map
 		 * @return string
 		 */
-		protected function getSiteMapXML() {
+		protected function writeSiteMap() {
 			$date_str = date("Y-m-d");
 			$writer = new \XMLWriter;
-			$writer->openURI('php://output');
+			$writer->openURI('sitemap.xml');
 			$writer->startDocument('1.0', 'UTF-8');
 			$writer->setIndent(1);
 			$writer->startElement('urlset');
@@ -58,7 +51,6 @@ namespace shotoftruth {
 			$writer->endElement();
 			ob_start();
 			$writer->flush();
-			return ob_get_clean();
 		}
 
 		protected function getOpenGraphTags(string $title, string $url, \SimpleXMLElement $episode = null) {
