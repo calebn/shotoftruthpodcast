@@ -1227,5 +1227,36 @@
 			<itunes:duration>00:53:25</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>Gio Takes the States</itunes:title>
+			<title>Gio Takes the States</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Interview with Giovanni Escobedo</itunes:subtitle>
+			<itunes:summary>Giovanni Escobedo found a home in the Rio Grande Valley after living in 34 different places! He came to the US by himself in search of safety, community, and work. He left Mexico to escape the violence queer folks were/are experiencing. He loves politics because he sees the change local communities can make when they come together. From organizing in high school to working at the state and national capitol--he’s all about it. He talks about the election in terms of the Valley while giving us a glimpse of his life living in a southern border city. “Everyone always talks about the RGV but they’ve never been here,” it is clear Gio has found community and LOVE in the RGV.</itunes:summary>
+			<description>Giovanni Escobedo found a home in the Rio Grande Valley after living in 34 different places! He came to the US by himself in search of safety, community, and work. He left Mexico to escape the violence queer folks were/are experiencing. He loves politics because he sees the change local communities can make when they come together. From organizing in high school to working at the state and national capitol--he’s all about it. He talks about the election in terms of the Valley while giving us a glimpse of his life living in a southern border city. “Everyone always talks about the RGV but they’ve never been here,” it is clear Gio has found community and LOVE in the RGV.</description>
+			<content:encoded><![CDATA[Giovanni Escobedo found a home in the Rio Grande Valley after living in 34 different places! He came to the US by himself in search of safety, community, and work. He left Mexico to escape the violence queer folks were/are experiencing. He loves politics because he sees the change local communities can make when they come together. From organizing in high school to working at the state and national capitol--he’s all about it. He talks about the election in terms of the Valley while giving us a glimpse of his life living in a southern border city. “Everyone always talks about the RGV but they’ve never been here,” it is clear Gio has found community and LOVE in the RGV.
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://www.instagram.com/GioEscobedoTx/">Follow Gio Instagram</a><br>
+				<a href="https://twitter.com/gioescobedotx">Follow Gio Twitter</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="64563116" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_038.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_038.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/38]]></link>
+			<pubDate>Thu, 03 Dec 2020 20:55:00 GMT</pubDate>
+			<itunes:duration>00:53:48</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
