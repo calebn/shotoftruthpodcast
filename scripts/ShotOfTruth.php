@@ -105,21 +105,21 @@ namespace shotoftruth {
 				<link rel="manifest" href="/site.webmanifest">
 				<title><?=$title?></title>
 				<?=self::getOpenGraphTags($title, $url, $episode)?>
-				<!-- Global site tag (gtag.js) - Google Analytics -->
-				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
-				<script>
-					window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'UA-150299611-1');
-				</script>
-				<!-- Google Tag Manager -->
 				<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 				})(window,document,'script','dataLayer','GTM-KKHFPHZ');</script>
 				<!-- End Google Tag Manager -->
+				<!-- Global site tag (gtag.js) - Google Analytics -->
+				<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150299611-1"></script>
+				<!-- Google Tag Manager -->
+				<script>
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'UA-150299611-1');
+				</script>
 			</head>
 			<body class="shot-of-truth">
 				<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -357,9 +357,9 @@ namespace shotoftruth {
 						<div class="row justify-content-center">
 							<div class="col-lg-6">
 								<h1 class="display-3">A Shot Of Truth</h1>
-								<h2>With Victoria Matey Mendoza</h2>
-								<p>This podcast is a platform for us undocumented people to share our experiences, ideas, concerns and whatever we want. Millions of people carry this identity and we all have different complex lives. It's time to pick the mic and tell our story our way.</p>
-								<p>We will not let our vulnerability silence us. This is our movement and we will win.</p>
+								<h2>With Victoria Matey</h2>
+								<p>A podcast dedicated to building a network focused on knowledge sharing, celebrating, and storytelling for and with Undocumented people. There are millions of undocumented people in this country from all over the world. People who are impacted by Border Imperialism through family separation, displacement, detention, and more. We are here to document our history and in doing so connecting, building, healing in our ways.</p>
+								<p>Our podcast has recorded with people throughout the country and in the last two years reached over 10 countries. As we evolve into this work we recognize it is a collective project--thank you for being a part of this!</p>
 							</div>
 						</div>
 					</div>
@@ -421,7 +421,8 @@ namespace shotoftruth {
 					<h1>About</h1>
 				</header>
 				<section>
-					<p>Victoria Matey Mendoza is an Undocumented Queer Womxn of Color dedicated to working with her community. In addition to hosting A Shot of Truth Podcast she has twice been a TEDx speaker. She is a Western Washington University Alumna, President of Blue Group 2016-2017, Changemaker Fellow 2017-2018 and Dream Lead Institute Fellow 2018-2019. She has been speaking for four years on various topics within the undocumented narrative—from higher education to border imperialism to detention centers.</p>
+					<p>I’m a 27-year-old creator. Hoping to be a 70-year-old creator someday. Creator of ideas, thoughts, content. Daydreamed my early 20s through Business school trying to understand my role in the world as a first-generation queer undocumented woman. Currently, Host of a Shot of Truth Podcast--a podcast created for undocumented people and those affected by border imperialism.</p>
+					<p>I love working with people and learning in community. During my free time, I like cooking, dancing, and lifting weights. I’ve released two TEDx talks and have been speaking all over the country for several years. I want to have fun and invest in my wellbeing. I just want to be free. I want all of us to be. I hope my work speaks for itself--I love doing it.</p>
 				</section>
 			</main>
 			<?php
