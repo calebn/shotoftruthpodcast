@@ -1258,5 +1258,38 @@
 			<itunes:duration>00:51:54</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>My American Dream</itunes:title>
+			<title>My American Dream</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Interview with Diego Corzo</itunes:subtitle>
+			<itunes:summary>At the age of nine, Diego Corzo came to the United States from Lima, Peru. This is a story about perseverance, risk-taking, and choosing your vision. Diego has been featured in Forbes, CNN Money, Telemundo (and more) highlighting his professional life as a Realtor and Investor.  He shares the path that helped him grow into the Entrepreneur that he is from self-education to finding ways to help other undocumented people. Diego shares many stories with us and tips on how to start building your vision.</itunes:summary>
+			<description>At the age of nine, Diego Corzo came to the United States from Lima, Peru. This is a story about perseverance, risk-taking, and choosing your vision. Diego has been featured in Forbes, CNN Money, Telemundo (and more) highlighting his professional life as a Realtor and Investor.  He shares the path that helped him grow into the Entrepreneur that he is from self-education to finding ways to help other undocumented people. Diego shares many stories with us and tips on how to start building your vision.</description>
+			<content:encoded><![CDATA[At the age of nine, Diego Corzo came to the United States from Lima, Peru. This is a story about perseverance, risk-taking, and choosing your vision. Diego has been featured in Forbes, CNN Money, Telemundo (and more) highlighting his professional life as a Realtor and Investor.  He shares the path that helped him grow into the Entrepreneur that he is from self-education to finding ways to help other undocumented people. Diego shares many stories with us and tips on how to start building your vision.
+			<br>
+			Show Notes:
+			<br>
+				<a href="https://www.instagram.com/realdiegocorzo/">Follow Deigo Instagram</a><br>
+				<a href="https://www.homefordreamers.com/">Homes for Dreamers</a><br>
+				<a href="https://www.ratracetofi.com/">Rat Race to Financial Independence</a><br>
+				<a href="https://www.youtube.com/watch?v=HfgUfgCZZ_I">Deigo's TEDX Talk</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="58085271" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_039.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_039.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/39]]></link>
+			<pubDate>Thu, 10 Dec 2020 21:10:00 GMT</pubDate>
+			<itunes:duration>00:48:24</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
