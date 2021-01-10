@@ -2,19 +2,32 @@
   margin-top: 56px;
 }
 .shot-of-truth .navbar {
-  background-color: #F9F1E1 !important;
+  background-color: #f9f1e1 !important;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
-.shot-of-truth h1 {
-  color: #5B0CE2;
+.shot-of-truth h1,
+.shot-of-truth h2,
+.shot-of-truth h3 {
+  color: #5b0ce2;
   font-weight: bold;
+}
+.shot-of-truth h3,
+.shot-of-truth h4 {
+  color: #2c0774;
+}
+.shot-of-truth h5,
+.shot-of-truth h6 {
+  color: #9c9b9b;
+}
+.shot-of-truth img {
+  max-width: 100%;
 }
 .shot-of-truth .card {
   background-color: inherit;
   border: none;
 }
 .shot-of-truth .card .card-title {
-  color: #2C0774;
+  color: #2c0774;
   font-weight: bold;
 }
 .shot-of-truth .center {
@@ -22,33 +35,53 @@
   margin-left: auto;
   margin-right: auto;
 }
+.shot-of-truth .nowrap {
+  white-space: nowrap;
+}
 .shot-of-truth a {
-  color: #5B0CE2;
+  color: #5b0ce2;
 }
 .shot-of-truth a:hover {
-  color: #2C0774;
-  text-decoration: underline!important;
+  color: #2c0774;
+  text-decoration: underline !important;
 }
 .shot-of-truth section {
   max-width: 652px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 32px;
+  padding-left: 45px;
+  padding-right: 45px;
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 767px) {
+  .shot-of-truth section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.shot-of-truth section.section-wide {
+  max-width: 1200px;
+}
+.shot-of-truth section:first-child {
+  padding-top: 32px;
+}
+.shot-of-truth section:last-child {
+  margin-bottom: 72px;
+}
+.shot-of-truth section + section {
+  margin-top: 72px;
+}
 .shot-of-truth figcaption {
-  color: #2C0774;
+  color: #2c0774;
 }
 .shot-of-truth .btn-primary {
-  background-color: #5B0CE2;
+  background-color: #5b0ce2;
   color: #fff;
-  border-color: #2C0774;
+  border-color: #2c0774;
 }
 .shot-of-truth .btn-primary:hover {
   color: #fff;
-  text-decoration: none!important;
-  background-color: #2C0774;
+  text-decoration: none !important;
+  background-color: #2c0774;
 }
 .shot-of-truth .home .row img {
   width: 100%;
@@ -56,23 +89,24 @@
 .shot-of-truth .home .jumbotron {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-image: url("/images/headphone-1600.jpg");
+  background-image: url('/images/headphone-1600.jpg');
   background-size: cover;
   background-position: center;
 }
 @media (min-width: 1601px) {
   .shot-of-truth .home .jumbotron {
-    background-image: url("/images/headphone-5184.jpg");
+    background-image: url('/images/headphone-5184.jpg');
   }
 }
 .shot-of-truth .home .jumbotron .display-3,
 .shot-of-truth .home .jumbotron h2,
 .shot-of-truth .home .jumbotron p {
-  color: #F9F1E1;
+  color: #f9f1e1;
 }
-.shot-of-truth .about h1 {
-  margin-top: 143px;
-  text-align: center;
+@media (max-width: 767px) {
+  .shot-of-truth .about header {
+    text-align: center;
+  }
 }
 .shot-of-truth .episodes-page {
   padding-top: 46px;
@@ -84,9 +118,48 @@
 .shot-of-truth .episodes-page .episode-subtitle,
 .shot-of-truth .episodes-page .episode-date,
 .shot-of-truth .episodes-page .episode-duration {
-  color: #2C0774;
+  color: #2c0774;
 }
 .shot-of-truth .page-item.active .page-link {
-  background-color: #5B0CE2;
-  border-color: #2C0774;
+  background-color: #5b0ce2;
+  border-color: #2c0774;
+}
+.shot-of-truth .media-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .shot-of-truth .media-split {
+    flex-direction: column-reverse;
+  }
+}
+.shot-of-truth .media-split__img {
+  max-width: 50%;
+}
+.shot-of-truth .media-split__info {
+  max-width: 45%;
+}
+@media (max-width: 767px) {
+  .shot-of-truth .media-split__img,
+  .shot-of-truth .media-split__info {
+    max-width: 100%;
+  }
+}
+.shot-of-truth .two-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.shot-of-truth .two-up__item {
+  max-width: 47.5%;
+  margin-top: 24px;
+}
+@media (max-width: 767px) {
+  .shot-of-truth .two-up__item {
+    max-width: 100%;
+    width: 100%;
+  }
 }

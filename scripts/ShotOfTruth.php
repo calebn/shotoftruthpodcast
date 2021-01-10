@@ -417,12 +417,30 @@ namespace shotoftruth {
 			ob_start();
 			?>
 			<main class="about">
-				<header role="banner">
-					<h1>About</h1>
-				</header>
-				<section>
-					<p>I’m a 27-year-old creator. Hoping to be a 70-year-old creator someday. Creator of ideas, thoughts, content. Daydreamed my early 20s through Business school trying to understand my role in the world as a first-generation queer undocumented woman. Currently, Host of a Shot of Truth Podcast--a podcast created for undocumented people and those affected by border imperialism.</p>
-					<p>I love working with people and learning in community. During my free time, I like cooking, dancing, and lifting weights. I’ve released two TEDx talks and have been speaking all over the country for several years. I want to have fun and invest in my wellbeing. I just want to be free. I want all of us to be. I hope my work speaks for itself--I love doing it.</p>
+				<section class="section-wide">
+					<div class="media-split">
+						<img src="images/vicky_about.jpg" alt="Vicky on white background" class="media-split__img" />
+						<article class="media-split__info">
+							<header role="banner">
+								<h1>About</h1>
+								<h4>Victoria Matey (she/her/ella)</h4>
+								<h5><span class="nowrap">Podcast Host,</span> <span class="nowrap">TEDx Speaker,</span> <span class="nowrap">Social Entrepreneur</span></h5>
+							</header>
+							<p>I’m a 28-year-old creator that's hoping to be a 70-year-old creator someday. I'm a creator of ideas, thoughts, content. I daydreamed my early 20s through Business school trying to understand my role in the world as a first-generation queer undocumented woman. Currently, I'm the host of a Shot of Truth Podcast--a podcast created for undocumented people and those affected by border imperialism.</p>
+							<p>I love working with people and learning in community. During my free time, I like cooking, dancing, and lifting weights. I’ve released two TEDx talks and have been speaking all over the country for several years. I want to have fun and invest in my well being. I just want to be free. I want all of us to be. I hope my work speaks for itself--I love doing it.</p>
+						</article>
+					</div>
+				</section>
+				<section class="section-wide">
+					<h2>TedX Talks</h2>
+					<article class="two-up">
+						<div class="two-up__item embed-responsive embed-responsive-16by9 rounded">
+							<iframe src="https://www.youtube-nocookie.com/embed/Sam5bfKCtLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="two-up__item embed-responsive embed-responsive-16by9 rounded">
+							<iframe src="https://www.youtube-nocookie.com/embed/mHr2MoAhSE0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</article>
 				</section>
 			</main>
 			<?php

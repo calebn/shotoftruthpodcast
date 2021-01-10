@@ -1,8 +1,8 @@
-@color-primary: #5B0CE2;
-@indigo: #2C0774;
-@linen: #F9F1E1;
-@black: #0C090C;
-@dark-gray: #9C9B9B;
+@color-primary: #5b0ce2;
+@indigo: #2c0774;
+@linen: #f9f1e1;
+@black: #0c090c;
+@dark-gray: #9c9b9b;
 
 .shot-of-truth {
 	// background-color: @linen;
@@ -11,12 +11,24 @@
 	.navbar {
 		background-color: @linen!important;
 		// color: @black!important;
-		box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 	}
 
-	h1 {
+	h1,h2,h3 {
 		color: @color-primary;
 		font-weight: bold;
+	}
+
+	h3,h4 {
+		color: @indigo
+	}
+
+	h5,h6 {
+		color: @dark-gray;
+	}
+
+	img {
+		max-width: 100%;
 	}
 
 	.card {
@@ -34,21 +46,45 @@
 		margin-right: auto;
 	}
 
+	.nowrap {
+		white-space: nowrap;
+	}
+
 	a {
 		color: @color-primary;
 		&:hover {
 			color: @indigo;
-			text-decoration: underline!important;
+			text-decoration: underline !important;
 		}
 	}
 
 	section {
 		max-width: 652px;
-		padding-left: 15px;
-		padding-right: 15px;
-		padding-top: 32px;
+		padding-left: 45px;
+		padding-right: 45px;
 		margin-left: auto;
 		margin-right: auto;
+
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		&.section-wide {
+			max-width: 1200px;
+		}
+
+		&:first-child {
+			padding-top: 32px;
+		}
+
+		&:last-child {
+			margin-bottom: 72px;
+		}
+	}
+
+	section + section {
+		margin-top: 72px;
 	}
 
 	figcaption {
@@ -61,7 +97,7 @@
 		border-color: @indigo;
 		&:hover {
 			color: #fff;
-			text-decoration: none!important;
+			text-decoration: none !important;
 			background-color: @indigo;
 		}
 	}
@@ -75,22 +111,25 @@
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			// background-color: @color-primary;
-			background-image: url("/images/headphone-1600.jpg");
+			background-image: url('/images/headphone-1600.jpg');
 			@media (min-width: 1601px) {
-				background-image: url("/images/headphone-5184.jpg");
+				background-image: url('/images/headphone-5184.jpg');
 			}
 			background-size: cover;
 			background-position: center;
-			.display-3, h2, p {
-				color: @linen ;
+			.display-3,
+			h2,
+			p {
+				color: @linen;
 			}
 		}
 	}
 
 	.about {
-		h1 {
-			margin-top: 143px;
-			text-align: center;
+		header {
+			@media (max-width: 767px) {
+				text-align: center;
+			}
 		}
 	}
 
@@ -100,7 +139,9 @@
 		& > h1 {
 			text-align: center;
 		}
-		.episode-subtitle, .episode-date, .episode-duration {
+		.episode-subtitle,
+		.episode-date,
+		.episode-duration {
 			color: @indigo;
 		}
 	}
@@ -110,4 +151,46 @@
 		border-color: @indigo;
 	}
 
+	.media-split {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		@media (max-width: 767px) {
+			flex-direction: column-reverse;
+		}
+
+		&__img {
+			max-width: 50%;
+		}
+
+		&__info {
+			max-width: 45%;
+		}
+
+		&__img,
+		&__info {
+			@media (max-width: 767px) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.two-up {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+
+		&__item {
+			max-width: 47.5%;
+			margin-top: 24px;
+
+			@media (max-width: 767px) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
 }
