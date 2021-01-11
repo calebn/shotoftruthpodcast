@@ -345,7 +345,10 @@ namespace shotoftruth {
 									<h6 class="card-subtitle mb-2 text-muted">Join the Community</h6>
 									<p class="card-text">Follow, retweet, say hi. Give us feedback, ask us questions or tell us your story. We'd love to get to know you.</p>
 									<a href="https://www.instagram.com/shotoftruthpodcast/" class="card-link">Instagram</a>
+									<a href="https://www.facebook.com/ShotOfTruthPodcast" class="card-link">Facebook</a>
 									<a href="https://twitter.com/shotoftruthpod" class="card-link">Twitter</a>
+									<a href="https://www.tiktok.com/@shotoftruthpodcast" class="card-link">TikTok</a>
+									<a href="mailto:info@shotoftruthpodcast.com" class="card-link">Email</a>
 								</div>
 							</div>
 						</div>
