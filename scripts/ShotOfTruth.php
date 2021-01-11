@@ -20,6 +20,7 @@ namespace shotoftruth {
 			$this->pages = [];
 			self::writeIndexPage();
 			self::writeAboutPage();
+			self::writeHirePage();
 			self::writeAllEpisodePages();
 			self::writeEpisodeListPage();
 			self::writeSiteMap();
@@ -141,6 +142,9 @@ namespace shotoftruth {
 							<li class="nav-item">
 								<a class="nav-link" href="/about">About</a>
 							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/hire">Hire</a>
+							</li>
 						<!--li class="nav-item">
 							<a class="nav-link" href="about-us.html">About Us</a>
 						</li-->
@@ -179,64 +183,7 @@ namespace shotoftruth {
 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-			<script>
-				setNavActive();
-				if(window.location.href.indexOf('/<?=self::getPodcastsFilename()?>') > 0){
-					window.addEventListener('popstate', function(e){
-						// console.log(e);
-						if(e.state){
-							page = getPageFromUrl(e.state.href);
-							// console.log('pushing '+page);
-							showEpisodeContainer(page,false);
-						}
-					});
-					$(document).ready(function(){
-						page = getPageFromUrl(window.location.href);
-						showEpisodeContainer(page,false);
-						$('.page-link').click(function(e){
-							e.preventDefault();
-							showEpisodeContainer($(this).attr('href').replace('#',''),true);
-							window.scrollTo(0, 0);
-						});
-					});
-					function showEpisodeContainer(page, push_state) {
-						// console.log('page entered: '+page);
-						let prev_page = Math.max(1,parseInt(page)-1);
-						// console.log(prev_page);
-						let next_page = Math.min($('.page-link').length -2, parseInt(page)+1);
-						// console.log(next_page);
-						$('.episode-container').hide();
-						$('#episodes-container-'+page).show();
-						$('.page-item').removeClass('active');
-						$('.page-num[href="#'+page+'"]').parent().addClass('active');
-						$('#prev-page').attr('href','#'+prev_page);
-						$('#next-page').attr('href','#'+next_page);
-						let href = window.location.href.replace(window.location.hash,'')+'#'+page;
-						if(push_state) {
-							window.location = href;
-						}
-					}
-					function getPageFromUrl(url) {
-						// console.log(url);
-						page = 1;
-						if(url.indexOf('#') > 0) {
-							page = url.substring(url.indexOf('#')+1);
-						}
-						// console.log(page);
-						return page;
-					}
-				}
-				function setNavActive() {
-					// console.log('setting active');
-					if($('main.home').length) {
-						$('.nav-link[href="/"]').parent().addClass('active');
-					}else if ($('main.episodes-page').length) {
-						$('.nav-link[href="/<?=self::getPodcastsFilename()?>"]').parent().addClass('active');
-					} else if ($('main.about').length){
-						$('.nav-link[href="/about"]').parent().addClass('active');	
-					}
-				}
-			</script>
+			<script type="text/javascript" src="script.js"></script>
 			<!-- Google Tag Manager (noscript) -->
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHFPHZ"
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -412,7 +359,7 @@ namespace shotoftruth {
 		 * Get HTML for about page
 		 * @return string
 		 */
-		protected function getaboutHtml() {
+		protected function getAboutHtml() {
 			$html = self::getHeaderHtml('About | A Shot Of Truth Podcast', 'https://shotoftruthpodcast.com/about');
 			ob_start();
 			?>
@@ -434,11 +381,172 @@ namespace shotoftruth {
 				<section class="section-wide">
 					<h2>TedX Talks</h2>
 					<article class="two-up">
-						<div class="two-up__item embed-responsive embed-responsive-16by9 rounded">
+						<div class="two-up__item embed-responsive embed-responsive-16by9 shadow-sm rounded">
 							<iframe src="https://www.youtube-nocookie.com/embed/Sam5bfKCtLI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</div>
-						<div class="two-up__item embed-responsive embed-responsive-16by9 rounded">
+						<div class="two-up__item embed-responsive embed-responsive-16by9 shadow-sm rounded">
 							<iframe src="https://www.youtube-nocookie.com/embed/mHr2MoAhSE0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+					</article>
+				</section>
+			</main>
+			<?php
+			return $html.(trim(ob_get_clean())).self::getFooterHtml();
+		}
+		/**
+		 * Get HTML for about page
+		 * @return string
+		 */
+		protected function getHireHtml() {
+			$html = self::getHeaderHtml('Hire | A Shot Of Truth Podcast', 'https://shotoftruthpodcast.com/hire');
+			ob_start();
+			?>
+			<main class="hire">
+				<header class="u-text-center" role="banner">
+					<h1>Hire</h1>
+					<p>Currently, we are doing virtual workshops, conferences, and facilitations. I have been speaking since 2013 in places including The Wonder Womxn in Tech Conference, Instagram/Facebook Offices, Disney World, and more. Below you can find the topics I cover. I am passionate about doing this work and collective learning.</p>
+					<p><a href="mailto:vicky@shotoftruthpodcast.com">Contact me for rates.</a></p>
+				</header>
+				<section class="section-wide">
+					<article class="media-split">
+						<img src="images/campus.jpg" alt="college campus" class="media-split__img shadow rounded">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>Undocumented &amp; Higher Education</h2>
+								<h6>2 Hours</h6>
+								<h4>For Educators &amp; Student Affairs Professionals</h4>
+							</header>
+							<p>This workshop is catered to educators and student affairs professionals. It covers:</p>
+							<ul>
+								<li>The importance of being aware and conscious of the undocumented experience in higher education</li>
+								<li>A brief explanation of HB1079 and DACA</li>
+								<li>Heavily focuses on our own biases, internalized racism, and how to better support undocumented students</li>
+							</ul>
+							<p>This is not a how-to step by step but rather turning inwards with your team and accessing your power in making a difference in your institution for and with undocumented students.</p>
+						</div>
+					</article>
+					<article class="media-split media-split--reverse">
+						<img src="images/immigrant-dehumanization-exploitation-disposal.png" alt="The Criminalization, Exploitation, and Disposal of Immigrants presentation screen shot" class="media-split__img shadow rounded">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>The Criminalization, Exploitation, and Disposal of Immigrants</h2>
+								<h6>1 Hour</h6>
+							</header>
+							<p>The Criminalization, Exploitation, and Disposal of Immigrants in terms of history, policy, and the media. This is an extended version of my first <a href="https://www.youtube.com/watch?v=mHr2MoAhSE0" target="_blank">TEDx Talk</a>. We have to look at language, policies, institutions to understand the structural system racism forced upon immigrants and undocumented immigrants.</p>
+							<p>Furthering my research on exploitation and detention this workshop will advance your understanding of the ideologies and institutions that criminalize, exploit, and dispose of immigrants. This workshop will help you view those ideologies and institutions through a different lens to better critically understand the context of US history and undocumented immigrants.</p>
+						</div>
+					</article>
+					<article class="media-split">
+						<img src="images/criminalization.png" alt="Parallels of Mass Incarceration and Mass Detention workshop screen shot" class="media-split__img shadow rounded">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>Parallels of Mass Incarceration and Mass Detention</h2>
+								<h6>45 Minutes</h6>
+							</header>
+							<p>This workshop is to access the parallels of mass incarceration and mass detention on stolen land. The public safety narrative has manipulated the American people to adopt racist practices that have caged millions of people. Caging people for profit and labor are acts of violence against humanity. US history paints a clear picture of the targeted abuse towards Black and Brown communities. Our objective is to walk through the parallels you cannot unsee.</p>
+						</div>
+					</article>
+					<article class="media-split media-split--reverse">
+						<img src="images/border-imperialism.png" alt="Border Imperialism in Our Everyday Lives workshop screen shot" class="media-split__img shadow rounded">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>Border Imperialism in Our Everyday Lives</h2>
+								<h6>50 Minutes</h6>
+								<h4>Interactive Session</h4>
+							</header>
+							<p>This workshop will teach you the underlinings of Border Imperialism and we will collectively unpack every section in terms of experience, history, ideas, and examples. It covers:</p>
+							<ul>
+								<li>The Displacement of People</li>
+								<li>Exploitation</li>
+								<li>Entrenchment of Racialized Hierarchy</li>
+								<li>Criminalization</li>
+							</ul>
+							<p>This is an interactive section that will be facilitated as a large group or small group. It consists of a 10 minute introduction, a 30 minute activity, and 10 minutes of Q&amp;A.</p>
+						</div>
+					</article>
+					<article class="media-split">
+						<img src="images/puzzle.jpg" alt="Parallels of Mass Incarceration and Mass Detention workshop screen shot" class="media-split__img shadow rounded">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>A Process of Elimination</h2>
+								<h6>1 Hour</h6>
+								<h4>Interactive Session</h4>
+							</header>
+							<p>I’ve done this interactive session with thousands of people! Ranging from all ages, backgrounds, identities. I’ve never given it a name until now but I’ve seen this be effective in every setting I’ve done this in. We start with identifying 4 key components of our lives and unpacking the importance of those. One by one we start eliminating our chosen key components and learning the true importance of sharing those with others. Prepare to get a little more acquainted with your team. 10 minute introduction, 45 minutes of activity and 10 minutes of closing remarks and Q&A.</p>
+							<p><strong>This session can be included with all workshops by request.</strong></p>
+						</div>
+					</article>
+					<article class="media-split media-split--reverse">
+						<svg class="media-split__img d-none d-md-block" preserveaspectratio="xMidYMid" viewbox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+						<g transform="rotate(0 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1.8333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(30 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1.6666666666666667s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(60 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1.5s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(90 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1.3333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(120 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1.1666666666666667s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(150 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-1s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(180 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-0.8333333333333334s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(210 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-0.6666666666666666s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(240 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-0.5s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(270 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-0.3333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(300 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="-0.16666666666666666s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						<g transform="rotate(330 50 50)">
+							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
+								<animate attributename="opacity" begin="0s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
+							</rect>
+						</g>
+						</svg>
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>Coming Soon</h2>
+								<h5>Workshops under development</h5>
+							</header>
+							<h4>Assimilation, Media &amp; Hxstory</h4>
+							<h4>Consumerism, Immigration, &amp; Globalization</h4>
+							<h4>COVID-19 &amp; Immigration</h4>
 						</div>
 					</article>
 				</section>
@@ -463,6 +571,16 @@ namespace shotoftruth {
 		protected function writeAboutPage() {
 			$filename = 'about.html';
 			file_put_contents($filename, self::getAboutHtml());
+			$this->pages[] = $filename;
+			return $filename;
+		}
+		/**
+		 * Writes the About Page to disk
+		 * @return null
+		 */
+		protected function writeHirePage() {
+			$filename = 'hire.html';
+			file_put_contents($filename, self::getHireHtml());
 			$this->pages[] = $filename;
 			return $filename;
 		}
