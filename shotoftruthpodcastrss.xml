@@ -1773,5 +1773,37 @@ Again thank you thank you for everything. We love ya’ll and happy holidays.
 			<itunes:duration>00:58:51</itunes:duration>
 			<itunes:explicit>yes</itunes:explicit>
 		</item>
+		<item>
+			<itunes:episodeType>full</itunes:episodeType>
+			<itunes:title>Luis Cortes Minisode 1</itunes:title>
+			<title>Luis Cortes Minisode 1</title>
+			<itunes:author>Sudo Science</itunes:author>
+			<itunes:subtitle>Luis Cortes Takeover 1</itunes:subtitle>
+			<itunes:summary>Our first minisode featuring Luis Cortes! In this episode, Luis Cortes shares what we need to know from the Biden Administration. Including TPS, full restoration of DACA, and pulling an emergency brake on deportations. This episode will also highlight some of Biden’s cabinet that will heavily impact immigration. Day one here we go!</itunes:summary>
+			<description>Our first minisode featuring Luis Cortes! In this episode, Luis Cortes shares what we need to know from the Biden Administration. Including TPS, full restoration of DACA, and pulling an emergency brake on deportations. This episode will also highlight some of Biden’s cabinet that will heavily impact immigration. Day one here we go!</description>
+			<content:encoded><![CDATA[Our first minisode featuring Luis Cortes! In this episode, Luis Cortes shares what we need to know from the Biden Administration. Including TPS, full restoration of DACA, and pulling an emergency brake on deportations. This episode will also highlight some of Biden’s cabinet that will heavily impact immigration. Day one here we go!
+			<br>
+			Show Notes:
+			<br>
+			<a href="https://twitter.com/LCortesRomero">Luis Cortes on twitter</a><br>
+			<br>
+			Find Us:
+			<ul>
+				<li><a href="https://www.patreon.com/shotoftruthpodcast">Support us on Patreon</a></li>
+				<li><a href="https://www.instagram.com/shotoftruthpodcast/">Follow us on Instagram</a></li>
+				<li><a href="https://www.facebook.com/ShotOfTruthPodcast">Visit our Facebook page</a></li>
+				<li><a href="https://twitter.com/shotoftruthpod">Find us on Twitter</a></li>
+				<li><a href="https://www.tiktok.com/@shotoftruthpodcast">Find us on TikTok</a></li>
+				<li><a href="https://shotoftruthpodcast.com">Visit our Website</a></li>
+				<li><a href="https://www.instagram.com/deriks_social_studies/">Music: Cadenza by @deriks_social_studies</a></li>
+				<li>Produced by Caleb Nelson of <a href="https://sudo.science">sudo Science</a></li>
+			</ul>]]></content:encoded>
+			<enclosure length="13736667" type="audio/mpeg" url="https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_044.mp3"/>
+			<guid>https://shotoftruthpodcast.com/episodes/shotoftruthpodcast_044.mp3</guid>
+			<link><![CDATA[https://shotoftruthpodcast.com/44]]></link>
+			<pubDate>Wed, 20 Jan 2021 01:45:00 GMT</pubDate>
+			<itunes:duration>00:11:27</itunes:duration>
+			<itunes:explicit>yes</itunes:explicit>
+		</item>
 	</channel>
 </rss>
