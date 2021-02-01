@@ -261,6 +261,7 @@ namespace shotoftruth {
 								<figcaption>Listen Here:</figcaption>
 								<audio
 								controls
+								preload="none"
 								src="<?=$episode->enclosure->attributes()->url?>"
 								title="Listen to the episode, <?=$episode->title?> here"
 								>
