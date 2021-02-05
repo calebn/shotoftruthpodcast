@@ -322,7 +322,7 @@ namespace shotoftruth {
 									<p class="card-text">You can find our podcast at the following places. More to come soon!</p>
 									<a href="https://itunes.apple.com/us/podcast/a-shot-of-truth/id1436122328" class="card-link">Apple Podcasts</a>
 									<a href="https://open.spotify.com/show/014rxomsYCAhWX98U1OMzk?si=jc7U--UbRIS0MZlCiL5vYA" class="card-link">Spotify</a>
-									<a href="https://playmusic.app.goo.gl/?ibi=com.google.PlayMusic&isi=691797987&ius=googleplaymusic&apn=com.google.android.music&link=https://play.google.com/music/m/I3zqct2jo7tthib57vpvuxptr6y?t%3DA_Shot_Of_Truth%26pcampaignid%3DMKT-na-all-co-pr-mu-pod-16" class="card-link">Google Play</a>
+									<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9zaG90b2Z0cnV0aHBvZGNhc3QuY29tL3Nob3RvZnRydXRocG9kY2FzdHJzcy54bWw" class="card-link">Google Podcasts</a>
 									<a href="https://www.stitcher.com/s?fid=235842&refid=stpr" class="card-link">Stitcher</a>
 									<a href="https://soundcloud.com/sudo-science/sets/a-shot-of-truth-podcast" class="card-link">SoundCloud</a>
 									<a href="/shotoftruthpodcastrss.xml" class="card-link">RSS Feed</a>
