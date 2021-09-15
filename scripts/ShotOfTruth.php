@@ -303,11 +303,12 @@ namespace shotoftruth {
 				<div class="jumbotron">
 					<div class="container">
 						<div class="row justify-content-center">
-							<div class="col-lg-6">
+							<div class="col-lg-8">
 								<h1 class="display-3">A Shot Of Truth</h1>
 								<h2>With Victoria Matey</h2>
-								<p>A podcast dedicated to building a network focused on knowledge sharing, celebrating, and storytelling for and with Undocumented people. There are millions of undocumented people in this country from all over the world. People who are impacted by Border Imperialism through family separation, displacement, detention, and more. We are here to document our history and in doing so connecting, building, healing in our ways.</p>
-								<p>Our podcast has recorded with people throughout the country and in the last two years reached over 10 countries. As we evolve into this work we recognize it is a collective project--thank you for being a part of this!</p>
+								<p>A podcast focused on celebrating story-telling for and knowledge-sharing with Undocumented people and those impacted by borders.</p>
+								<p>Host Victoria Matey Mendoza (she/her) is a queer, undocumented digital creator based in Washington. She has been speaking for eight years on immigration topics and started Shot of Truth Podcast to connect with others and to heal through dialogue. Her vision is to re-imagine a society without borders and cages--by pushing for a collective shift in consciousness.</p>
+								<p>Through the podcast, she has been able to connect with people from all over the country who have stories and idea’s to share. Shot of Truth podcast has built a national network of people driven to make change in their communities. You can listen to all of our episodes via Spotify, Apple Podcast, and right here on our website. Workshops are also offered including interactive sessions via Zoom or in person. Learn how you or your organization can collaborate with Shot of Truth Podcast.</p>
 							</div>
 						</div>
 					</div>
@@ -373,7 +374,7 @@ namespace shotoftruth {
 						<img src="images/vicky_about.jpg" alt="Vicky on white background" class="media-split__img" />
 						<article class="media-split__info">
 							<header role="banner">
-								<h1>About</h1>
+								<h1 class="super">About</h1>
 								<h4>Victoria Matey (she/her/ella)</h4>
 								<h5><span class="nowrap">Podcast Host,</span> <span class="nowrap">TEDx Speaker,</span> <span class="nowrap">Social Entrepreneur</span></h5>
 							</header>
@@ -407,150 +408,156 @@ namespace shotoftruth {
 			?>
 			<main class="hire">
 				<header class="u-text-center" role="banner">
-					<h1>Hire</h1>
-					<p>Currently, we are doing virtual workshops, conferences, and facilitations. I have been speaking since 2013 in places including The Wonder Womxn in Tech Conference, Instagram/Facebook Offices, Disney World, and more. Below you can find the topics I cover. I am passionate about doing this work and collective learning.</p>
-					<p><a href="mailto:vicky@shotoftruthpodcast.com">Contact me for rates.</a></p>
+					<h1 class="super">Hire</h1>
+					<p>Victoria has been speaking for eight years on unpacking systemic and parallel issues to immigration. She has participated in national leadership, education and technology conferences and has partnered with various businesses and organizations. She offers workshops and works with other presenters to bring a deeper understanding of our role in all the intersecting pieces of migration and more.</p>
+					<p>All of our services are offered on a sliding scale. Please contact <a href="mailto:info@shotoftruthpodcast.com">info@shotoftruthpodcast.com</a>.com to book Victoria or learn more!</p>
 				</header>
 				<section class="section-wide">
-					<article class="media-split">
-						<img src="images/campus.jpg" alt="college campus" class="media-split__img shadow rounded">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="carousel-item__container d-block w-100 rounded dark-bg bg-primary-indigo">
+								<h1 class="u-text-center">Workshops</h1>
+								<div class="carousel-item__content">
+									<h5><a href="#climate-change-and-migration">Climate Change and Migration</a></h5>
+									<h5><a href="#parallels-of-mass-incarceration-and-mass-detention">Parallels of Mass Incarceration and Mass Detention</a></h5>
+									<h5><a href="#undocumented-students-and-higher-education">Undocumented Students & Higher Education</a></h5>
+									<h5><a href="#criminalization-exploitation-and-disposal-of-immigrants">The Criminalization Exploitation and Disposal of Immigrants</a></h5>
+									<h5><a href="#a-process-of-elimination">A Process of Elimination</a></h5>
+									<h5><a href="#border-imperialism">Border Imperialism in our Everyday Lives</a></h5>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-item__container d-block w-100 rounded dark-bg bg-primary-indigo">
+								<h1 class="u-text-center">Sponsored Episodes</h1>
+								<h4 class="u-text-center">Our values: Community, Authenticity, Compassion</h4>
+								<div class="carousel-item__content">
+									<p class="bold">You can build episodes with us! Does your organization want to highlight a deeper understanding of the work you do with immigrant communities? We work with you to share information, creative solutions, and more. We have partnered with community centers and nonprofits in the past to create episodes like “El Centro y El Census”--an episode focused on highlighting a Latino Center in Tacoma, WA helping immigrants learn about the census.</p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-item__container d-block w-100 rounded dark-bg bg-primary-indigo">
+								<h1 class="u-text-center">Live Ad Reads</h1>
+								<div class="carousel-item__content">
+									<p class="bold">We highlight your events, businesses, or programs at the beginning of our show. These partnerships need to be scheduled 2-3 weeks prior to your event or program. We want to highlight and work with organizations actively doing immigration, organizing, or education work. Please contact us for rates at <a href="mailto:info@shotoftruthpodcast.com">info@shotoftruthpodcast.com</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-item__container d-block w-100 rounded dark-bg bg-primary-indigo">
+								<h1 class="u-text-center">Podcast Consulting</h1>
+								<h4 class="u-text-center">(Coming Soon)</h4>
+								<div class="carousel-item__content">
+									<div class="two-up">
+										<div class="two-up__item">
+											<p class="bold">Want to start your own podcast? We are here to help. This package includes a total of four sessions and two episode production. You get to work personally with our team to build your podcast. This is a month-long commitment and requires highly invested people ready to take an idea off the ground. We will coach you through the first production of your show and prepare you to run your podcast moving forward.</p>
+										</div>
+										<div class="two-up__item">
+											<h5>Sessions Offered:</h5>
+											<ul>
+												<li>Starting up your Podcast 101</li>
+												<li>Technology: Virtual or in person</li>
+												<li>Podcast Episode Prep &amp; Marketing</li>
+												<li>Tracking &amp; Monetizing</li>
+												<li>Debrief Session</li>
+											</ul>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				</section>
+				<section class="section-wide">
+					<article id="climate-change-and-migration" class="media-split">
+						<img src="images/climate-change-and-migration.png" alt="Climate change and migration presentation slide" class="media-split__img shadow rounded" width="960" height="540">
 						<div class="media-split__info">
 							<header role="banner">
-								<h2>Undocumented &amp; Higher Education</h2>
-								<h6>2 Hours</h6>
-								<h4>For Educators &amp; Student Affairs Professionals</h4>
+								<h2>Climate Change and Migration</h2>
+								<h6>1 Hour</h6>
 							</header>
-							<p>This workshop is catered to educators and student affairs professionals. It covers:</p>
-							<ul>
-								<li>The importance of being aware and conscious of the undocumented experience in higher education</li>
-								<li>A brief explanation of HB1079 and DACA</li>
-								<li>Heavily focuses on our own biases, internalized racism, and how to better support undocumented students</li>
-							</ul>
-							<p>This is not a how-to step by step but rather turning inwards with your team and accessing your power in making a difference in your institution for and with undocumented students.</p>
+							<p>This workshop highlights a global perspective of the impacts of climate change and migration. By 2050 over 200 million to a billion people will be displaced by climate catastrophes. As we view migration as a global issue we must look at climate change through the same lens, it is a global crisis with only a collective solution.</p>
+							<p>I have spent years working on immigration topics and this is the first time I look at the intersections of climate change. I cannot continue my work without talking about this. We should all be preparing for massive migration in a just way.</p>
 						</div>
 					</article>
-					<article class="media-split media-split--reverse">
-						<img src="images/immigrant-dehumanization-exploitation-disposal.png" alt="The Criminalization, Exploitation, and Disposal of Immigrants presentation screen shot" class="media-split__img shadow rounded">
+					<article id="criminalization-exploitation-and-disposal-of-immigrants" class="media-split media-split--reverse">
+						<img src="images/public-safety-narrative.png" alt="The Criminalization, Exploitation, and Disposal of Immigrants presentation screen shot" class="media-split__img shadow rounded" width="960" height="540">
 						<div class="media-split__info">
 							<header role="banner">
 								<h2>The Criminalization, Exploitation, and Disposal of Immigrants</h2>
-								<h6>1 Hour</h6>
+								<h6>1.5 Hours</h6>
 							</header>
 							<p>The Criminalization, Exploitation, and Disposal of Immigrants in terms of history, policy, and the media. This is an extended version of my first <a href="https://www.youtube.com/watch?v=mHr2MoAhSE0" target="_blank">TEDx Talk</a>. We have to look at language, policies, institutions to understand the structural system racism forced upon immigrants and undocumented immigrants.</p>
 							<p>Furthering my research on exploitation and detention this workshop will advance your understanding of the ideologies and institutions that criminalize, exploit, and dispose of immigrants. This workshop will help you view those ideologies and institutions through a different lens to better critically understand the context of US history and undocumented immigrants.</p>
 						</div>
 					</article>
-					<article class="media-split">
-						<img src="images/criminalization.png" alt="Parallels of Mass Incarceration and Mass Detention workshop screen shot" class="media-split__img shadow rounded">
+					<article id="undocumented-students-and-higher-education" class="media-split">
+						<img src="images/undocumented-students-and-higher-education.png" alt="Undocumented students and higher education presentation slide" class="media-split__img shadow rounded" width="960" height="540">
+						<div class="media-split__info">
+							<header role="banner">
+								<h2>Undocumented Students &amp; Higher Education</h2>
+								<h6>2 Hours</h6>
+								<h4>For Educators &amp; Student Affairs Professionals</h4>
+							</header>
+							<p>This workshop is catered to educators and student affairs professionals. It will highlight the importance of being aware and conscious of the undocumented experience in higher education. It will cover a brief explanation of state financial support systems and DACA but heavily focuses on our own biases, internalized racism, and how to better support undocumented students.</p>
+							<p>I will share pieces of my student experience in higher education and additionally my work as a student affairs professional. This is not a how-to step by step but rather turning inwards with your team and accessing your power in making a difference in your institution for and with undocumented students</p>
+						</div>
+					</article>
+					<article id="parallels-of-mass-incarceration-and-mass-detention" class="media-split media-split--reverse">
+						<img src="images/parallels-of-mass-incarceration-and-mass-detention.png" alt="Paralles of mass incarceration and mass detention presentation screen shot" class="media-split__img shadow rounded" width="960" height="540">
 						<div class="media-split__info">
 							<header role="banner">
 								<h2>Parallels of Mass Incarceration and Mass Detention</h2>
 								<h6>45 Minutes</h6>
 							</header>
-							<p>This workshop is to access the parallels of mass incarceration and mass detention on stolen land. The public safety narrative has manipulated the American people to adopt racist practices that have caged millions of people. Caging people for profit and labor are acts of violence against humanity. US history paints a clear picture of the targeted abuse towards Black and Brown communities. Our objective is to walk through the parallels you cannot unsee.</p>
+							<p>This workshop is to assess the parallels of mass incarceration and mass detention. The public safety narrative has manipulated the American people to adopt racist practices that have caged millions of people. Caging people for profit and labor are acts of violence against humanity. US history paints a clear picture of the targeted abuse towards Black and Brown communities. Our objective is to walk through the parallels you cannot unsee.</p>
+							<p>This workshop is presented by Victoria Matey and Steven Simmons.</p>
 						</div>
 					</article>
-					<article class="media-split media-split--reverse">
-						<img src="images/border-imperialism.png" alt="Border Imperialism in Our Everyday Lives workshop screen shot" class="media-split__img shadow rounded">
-						<div class="media-split__info">
-							<header role="banner">
-								<h2>Border Imperialism in Our Everyday Lives</h2>
-								<h6>50 Minutes</h6>
-								<h4>Interactive Session</h4>
-							</header>
-							<p>This workshop will teach you the underlinings of Border Imperialism and we will collectively unpack every section in terms of experience, history, ideas, and examples. It covers:</p>
-							<ul>
-								<li>The Displacement of People</li>
-								<li>Exploitation</li>
-								<li>Entrenchment of Racialized Hierarchy</li>
-								<li>Criminalization</li>
-							</ul>
-							<p>This is an interactive section that will be facilitated as a large group or small group. It consists of a 10 minute introduction, a 30 minute activity, and 10 minutes of Q&amp;A.</p>
-						</div>
-					</article>
-					<article class="media-split">
-						<img src="images/puzzle.jpg" alt="Parallels of Mass Incarceration and Mass Detention workshop screen shot" class="media-split__img shadow rounded">
+					<article id="a-process-of-elimination" class="media-split">
+						<img src="images/process-of-elimination.png" alt="A process of elimination presentation slide" class="media-split__img shadow rounded" width="960" height="540">
 						<div class="media-split__info">
 							<header role="banner">
 								<h2>A Process of Elimination</h2>
 								<h6>1 Hour</h6>
 								<h4>Interactive Session</h4>
 							</header>
-							<p>I’ve done this interactive session with thousands of people! Ranging from all ages, backgrounds, identities. I’ve never given it a name until now but I’ve seen this be effective in every setting I’ve done this in. We start with identifying 4 key components of our lives and unpacking the importance of those. One by one we start eliminating our chosen key components and learning the true importance of sharing those with others. Prepare to get a little more acquainted with your team. 10 minute introduction, 45 minutes of activity and 10 minutes of closing remarks and Q&A.</p>
+							<p>I’ve done this interactive session with thousands of people! Ranging from all ages, backgrounds, identities. I’ve never given it a name until now but I’ve seen this be effective in every setting I’ve done this in. We start with identifying 4 key components of our lives and unpacking the importance of those. One by one we start eliminating our chosen key components and learning the true importance of sharing those with others. Prepare to get a little more acquainted with your team.</p>
+							<ul>
+								<li>10 minute introduction</li>
+								<li>45 minutes of activity</li>
+								<li>10 minutes of closing remarks and Q&amp;A.</li>
+							</ul>
 							<p><strong>This session can be included with all workshops by request.</strong></p>
 						</div>
 					</article>
-					<article class="media-split media-split--reverse">
-						<svg class="media-split__img d-none d-md-block" preserveaspectratio="xMidYMid" viewbox="0 0 100 100" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-						<g transform="rotate(0 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1.8333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(30 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1.6666666666666667s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(60 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1.5s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(90 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1.3333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(120 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1.1666666666666667s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(150 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-1s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(180 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-0.8333333333333334s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(210 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-0.6666666666666666s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(240 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-0.5s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(270 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-0.3333333333333333s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(300 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="-0.16666666666666666s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						<g transform="rotate(330 50 50)">
-							<rect fill="#5b0ce2" height="12" rx="3" ry="6" width="6" x="47" y="24">
-								<animate attributename="opacity" begin="0s" dur="2s" keytimes="0;1" repeatcount="indefinite" values="1;0"></animate>
-							</rect>
-						</g>
-						</svg>
+					<article id="border-imperialism" class="media-split media-split--reverse">
+						<img src="images/border-imperialism.png" alt="Border Imperialism presentation slide" class="media-split__img shadow rounded" width="960" height="540">
 						<div class="media-split__info">
 							<header role="banner">
-								<h2>Coming Soon</h2>
-								<h5>Workshops under development</h5>
+								<h2>Border Imperialism in Our Everyday Lives</h2>
+								<h6>50 Minutes</h6>
+								<h4>Interactive Session</h4>
 							</header>
-							<h4>Assimilation, Media &amp; Hxstory</h4>
-							<h4>Consumerism, Immigration, &amp; Globalization</h4>
-							<h4>COVID-19 &amp; Immigration</h4>
+							<p>This workshop will teach you the underlinings of Border Imperialism and we will collectively unpack every section in terms of experience, history, ideas, and examples. As follows: The Displacement of People, Exploitation, Entrenchment of Racialized Hierarchy, and Criminalization. This is an interactive section that will be facilitated as a large group or small group.</p>
+							<ul>
+								<li>10 minute introduction</li>
+								<li>30 minutes of activity</li>
+								<li>10 minutes of closing remarks and Q&amp;A.</li>
+							</ul>
+							<p><strong>This session can be included with all workshops by request.</strong></p>
 						</div>
 					</article>
 				</section>

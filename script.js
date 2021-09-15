@@ -1,3 +1,4 @@
+$('.carousel').carousel()
 setNavActive();
 if (window.location.href.indexOf('/podcasts') > 0) {
 	window.addEventListener('popstate', function (e) {
@@ -17,6 +18,7 @@ if (window.location.href.indexOf('/podcasts') > 0) {
 			window.scrollTo(0, 0);
 		});
 	});
+	
 	function showEpisodeContainer(page, push_state) {
 		// console.log('page entered: '+page);
 		let prev_page = Math.max(1, parseInt(page) - 1);

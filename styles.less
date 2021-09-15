@@ -3,8 +3,22 @@
 @linen: #f9f1e1;
 @black: #0c090c;
 @dark-gray: #9c9b9b;
+@light-gray: #d1d1d1;
+// ------------------------
+// Break Points
+// ------------------------
+@breakpoint-lg: 1279px;
+@breakpoint-md: 991px;
+@breakpoint-sm: 767px;
+@breakpoint-xs: 575px;
+@breakpoint-xxs: 374px;
 
 .shot-of-truth {
+	* {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
 	// background-color: @linen;
 	margin-top: 56px;
 
@@ -12,6 +26,14 @@
 		background-color: @linen!important;
 		// color: @black!important;
 		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	}
+
+	.super {
+		font-size: 72px;
+	}
+
+	.bold {
+		font-weight: bold;
 	}
 
 	h1,h2,h3 {
@@ -27,8 +49,49 @@
 		color: @dark-gray;
 	}
 
+	a {
+		color: @color-primary;
+		&:hover {
+			color: @indigo;
+			text-decoration: underline !important;
+		}
+	}
+
 	img,svg {
 		max-width: 100%;
+	}
+
+	.bg-primary-purple {
+		background-color: @color-primary;
+	}
+
+	.bg-primary-indigo {
+		background-color: @indigo;
+	}
+
+	.dark-bg {
+		h1,h2,h3 {
+			color: #fff;
+		}
+	
+		h3,h4 {
+			color: @light-gray;
+		}
+	
+		h5,h6,p,ul li {
+			color: @linen;
+		}
+
+		li::before {
+			color: @linen;
+		}
+
+		a {
+			color: #fff;
+			&:hover {
+				color: @linen;
+			}
+		}
 	}
 
 	.card {
@@ -52,14 +115,6 @@
 
 	.nowrap {
 		white-space: nowrap;
-	}
-
-	a {
-		color: @color-primary;
-		&:hover {
-			color: @indigo;
-			text-decoration: underline !important;
-		}
 	}
 
 	main {
@@ -151,12 +206,36 @@
 		margin-top: 72px;
 
 		@media (max-width: 767px) {
-			margin-top: 24px;
+			margin-top: 48px;
 		}
 	}
 
 	figcaption {
 		color: @indigo;
+	}
+
+	.carousel-item {
+		&__container {
+			height: 500px;
+			padding: 56px 16px;
+			padding-left: 64px;
+			padding-right: 64px;
+
+			@media (max-width: @breakpoint-md) {
+				height: 600px;
+			}
+
+			@media (max-width: @breakpoint-xs) {
+				height: 900px;
+			}
+		}
+
+		&__content {
+			max-width: 720px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 24px;
+		}
 	}
 
 	.btn-primary {
@@ -241,6 +320,7 @@
 
 		&__img {
 			max-width: 50%;
+			height: auto;
 		}
 
 		&__info {
@@ -259,7 +339,7 @@
 		margin-top: 72px;
 
 		@media (max-width: 767px) {
-			margin-top: 24px;
+			margin-top: 56px;
 		}
 	}
 
