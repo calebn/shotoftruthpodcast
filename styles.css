@@ -18,7 +18,7 @@
 .shot-of-truth h1,
 .shot-of-truth h2,
 .shot-of-truth h3 {
-  color: #5b0ce2;
+  color: #5c0ee0;
   font-weight: bold;
 }
 .shot-of-truth h3,
@@ -30,18 +30,45 @@
   color: #9c9b9b;
 }
 .shot-of-truth a {
-  color: #5b0ce2;
+  color: #5c0ee0;
 }
 .shot-of-truth a:hover {
   color: #2c0774;
   text-decoration: underline !important;
+}
+.shot-of-truth .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  min-width: 150px;
+  font-weight: bold;
+}
+.shot-of-truth .btn--primary {
+  background-color: #5c0ee0;
+  color: #fff;
+  border-color: #2c0774;
+}
+.shot-of-truth .btn--primary:hover {
+  color: #fff;
+  text-decoration: none !important;
+  background-color: #2c0774;
+}
+.shot-of-truth .btn--light {
+  background-color: #f9f1e1;
+  border-width: 2px;
+  color: #5c0ee0;
+  border-color: #5c0ee0;
+}
+.shot-of-truth .btn--light:hover {
+  color: #2c0774;
+  text-decoration: none !important;
+  background-color: #fff;
 }
 .shot-of-truth img,
 .shot-of-truth svg {
   max-width: 100%;
 }
 .shot-of-truth .bg-primary-purple {
-  background-color: #5b0ce2;
+  background-color: #5c0ee0;
 }
 .shot-of-truth .bg-primary-indigo {
   background-color: #2c0774;
@@ -194,23 +221,13 @@
   margin-right: auto;
   margin-top: 24px;
 }
-.shot-of-truth .btn-primary {
-  background-color: #5b0ce2;
-  color: #fff;
-  border-color: #2c0774;
-}
-.shot-of-truth .btn-primary:hover {
-  color: #fff;
-  text-decoration: none !important;
-  background-color: #2c0774;
-}
 .shot-of-truth .home .row img {
   width: 100%;
 }
 .shot-of-truth .home .jumbotron {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  background-image: url('/images/headphone-1600.jpg');
+  background-image: url('/images/headphone-3200.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -245,7 +262,7 @@
   color: #2c0774;
 }
 .shot-of-truth .page-item.active .page-link {
-  background-color: #5b0ce2;
+  background-color: #5c0ee0;
   border-color: #2c0774;
 }
 .shot-of-truth .media-split {

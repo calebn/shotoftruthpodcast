@@ -1,5 +1,7 @@
-@color-primary: #5b0ce2;
+@color-primary: #5c0ee0;
 @indigo: #2c0774;
+@max-yellow: #fbc24d;
+@dark-red: #900A08;
 @linen: #f9f1e1;
 @black: #0c090c;
 @dark-gray: #9c9b9b;
@@ -54,6 +56,37 @@
 		&:hover {
 			color: @indigo;
 			text-decoration: underline !important;
+		}
+	}
+
+
+	.btn {
+		display: inline-block;
+		padding: 6px 12px;
+		min-width: 150px;
+		font-weight: bold;
+
+		&--primary {
+			background-color: @color-primary;
+			color: #fff;
+			border-color: @indigo;
+			&:hover {
+				color: #fff;
+				text-decoration: none !important;
+				background-color: @indigo;
+			}
+		}
+
+		&--light {
+			background-color: @linen;
+			border-width: 2px;
+			color: @color-primary;
+			border-color: @color-primary;
+			&:hover {
+				color: @indigo;
+				text-decoration: none !important;
+				background-color: #fff;
+			}
 		}
 	}
 
@@ -238,17 +271,6 @@
 		}
 	}
 
-	.btn-primary {
-		background-color: @color-primary;
-		color: #fff;
-		border-color: @indigo;
-		&:hover {
-			color: #fff;
-			text-decoration: none !important;
-			background-color: @indigo;
-		}
-	}
-
 	.home {
 		// background-color: @linen;
 		.row img {
@@ -258,7 +280,7 @@
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 			// background-color: @color-primary;
-			background-image: url('/images/headphone-1600.jpg');
+			background-image: url('/images/headphone-3200.jpg');
 			@media (min-width: 1601px) {
 				background-image: url('/images/headphone-5184.jpg');
 			}

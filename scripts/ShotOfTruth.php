@@ -300,7 +300,7 @@ namespace shotoftruth {
 			ob_start();
 			?>
 			<main class="home">
-				<div class="jumbotron">
+				<header role="banner" class="jumbotron">
 					<div class="container">
 						<div class="row justify-content-center">
 							<div class="col-lg-8">
@@ -309,29 +309,34 @@ namespace shotoftruth {
 								<p>A podcast focused on celebrating story-telling for and knowledge-sharing with Undocumented people and those impacted by borders.</p>
 								<p>Host Victoria Matey Mendoza (she/her) is a queer, undocumented digital creator based in Washington. She has been speaking for eight years on immigration topics and started Shot of Truth Podcast to connect with others and to heal through dialogue. Her vision is to re-imagine a society without borders and cages--by pushing for a collective shift in consciousness.</p>
 								<p>Through the podcast, she has been able to connect with people from all over the country who have stories and idea’s to share. Shot of Truth podcast has built a national network of people driven to make change in their communities. You can listen to all of our episodes via Spotify, Apple Podcast, and right here on our website. Workshops are also offered including interactive sessions via Zoom or in person. Learn how you or your organization can collaborate with Shot of Truth Podcast.</p>
+								<a class="btn btn--primary" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeESfcvgr0gbVpZUy26ldApf_ftA-vwdlnsFe0X4SgsJ4unzA/viewform?usp=sf_link" class="button">Work with us</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="container">
+				</header>
+				<section class="container section-wide">
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-md-4">
 							<div class="card m-1" >
+							<img class="card-img-top" src="images/where-to-listen.jpg" alt="Black and white image of Vicky smiling">
 								<div class="card-body">
 									<h5 class="card-title">Where to Listen</h5>
 									<h6 class="card-subtitle mb-2 text-muted">Subscribe to the Podcast</h6>
-									<p class="card-text">You can find our podcast at the following places. More to come soon!</p>
-									<a href="https://itunes.apple.com/us/podcast/a-shot-of-truth/id1436122328" class="card-link">Apple Podcasts</a>
-									<a href="https://open.spotify.com/show/014rxomsYCAhWX98U1OMzk?si=jc7U--UbRIS0MZlCiL5vYA" class="card-link">Spotify</a>
-									<a href="https://podcasts.google.com/feed/aHR0cHM6Ly9zaG90b2Z0cnV0aHBvZGNhc3QuY29tL3Nob3RvZnRydXRocG9kY2FzdHJzcy54bWw" class="card-link">Google Podcasts</a>
-									<a href="https://www.stitcher.com/s?fid=235842&refid=stpr" class="card-link">Stitcher</a>
-									<a href="https://soundcloud.com/sudo-science/sets/a-shot-of-truth-podcast" class="card-link">SoundCloud</a>
-									<a href="/shotoftruthpodcastrss.xml" class="card-link">RSS Feed</a>
+									<p class="card-text">You can find our podcast at the following places.</p>
+									<ul>
+										<li><a href="https://itunes.apple.com/us/podcast/a-shot-of-truth/id1436122328" class="card-link">Apple Podcasts</a></li>
+										<li><a href="https://open.spotify.com/show/014rxomsYCAhWX98U1OMzk?si=jc7U--UbRIS0MZlCiL5vYA" class="card-link">Spotify</a></li>
+										<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9zaG90b2Z0cnV0aHBvZGNhc3QuY29tL3Nob3RvZnRydXRocG9kY2FzdHJzcy54bWw" class="card-link">Google Podcasts</a></li>
+										<li><a href="https://www.stitcher.com/s?fid=235842&refid=stpr" class="card-link">Stitcher</a></li>
+										<li><a href="https://soundcloud.com/sudo-science/sets/a-shot-of-truth-podcast" class="card-link">SoundCloud</a></li>
+										<li><a href="/shotoftruthpodcastrss.xml" class="card-link">RSS Feed</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-4">
 							<div class="card m-1" >
+							<img class="card-img-top" src="images/join-the-cause.jpg" alt="Table with colorful blanket, flowers and candles">
 								<div class="card-body">
 									<h5 class="card-title">Join The Cause</h5>
 									<h6 class="card-subtitle mb-2 text-muted">Help Us Reach More People</h6>
@@ -340,22 +345,25 @@ namespace shotoftruth {
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+						<div class="col-md-4">
 							<div class="card m-1" >
+							<img class="card-img-top" src="images/reach-out.jpg" alt="Group of smiling people">
 								<div class="card-body">
 									<h5 class="card-title">Reach Out</h5>
 									<h6 class="card-subtitle mb-2 text-muted">Join the Community</h6>
 									<p class="card-text">Follow, retweet, say hi. Give us feedback, ask us questions or tell us your story. We'd love to get to know you.</p>
-									<a href="https://www.instagram.com/shotoftruthpodcast/" class="card-link">Instagram</a>
-									<a href="https://www.facebook.com/ShotOfTruthPodcast" class="card-link">Facebook</a>
-									<a href="https://twitter.com/shotoftruthpod" class="card-link">Twitter</a>
-									<a href="https://www.tiktok.com/@shotoftruthpodcast" class="card-link">TikTok</a>
-									<a href="mailto:info@shotoftruthpodcast.com" class="card-link">Email</a>
+									<ul>
+										<li><a href="https://www.instagram.com/shotoftruthpodcast/" class="card-link">Instagram</a></li>
+										<li><a href="https://www.facebook.com/ShotOfTruthPodcast" class="card-link">Facebook</a></li>
+										<li><a href="https://twitter.com/shotoftruthpod" class="card-link">Twitter</a></li>
+										<li><a href="https://www.tiktok.com/@shotoftruthpodcast" class="card-link">TikTok</a></li>
+										<li><a href="mailto:info@shotoftruthpodcast.com" class="card-link">Email</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</secti>
 			</main>
 			<?php
 			return $html.(trim(ob_get_clean())).self::getFooterHtml();
@@ -610,7 +618,7 @@ namespace shotoftruth {
 					<h6 class="card-subtitle mb-2 text-muted" title="<?=$episode->xpath('itunes:subtitle')[0]?>s"><?=$episode->xpath('itunes:subtitle')[0]?> (<?=$episode->xpath('itunes:duration')[0]?>)</h6>
 					<h6 class="blog-date"><?=date('F j, Y',strtotime($episode->pubDate))?></h6>
 					<p class="card-text"><?=$episode->description?></p>
-					<a href="<?=self::getEpisodeFilename($episode_num)?>" class="btn btn-primary">Episode Page</a>
+					<a href="<?=self::getEpisodeFilename($episode_num)?>" class="btn btn--primary">Episode Page</a>
 				</div>
 			</div>
 			<?php
